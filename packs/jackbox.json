@@ -1,0 +1,77 @@
+{
+	"name": "The Jackbox Party Pack",
+	"url": "https://www.jackboxgames.com/party-pack/",
+	"free": false,
+	
+	"games": [
+		{
+			"name": "YOU DON’T KNOW JACK 2015",
+			"summary": "YOU DON’T KNOW JACK 2015 is the first Party Pack edition of your favorite game show, where high culture and pop culture collide! Enjoy the snarky trivia you know and love from the comfort of one of many digital platforms!",
+			"description": "Take your pick from 50 new episodes hosted by Cookie Masterson. In each episode, players tackle twisted trivia questions for money and have the opportunity to “screw” other players by forcing them to answer the toughest questions. Answer wrong and you’ll lose cash… unless you discover the coveted Wrong Answer of the Game.",
+			"url": "https://www.jackboxgames.com/ydkj-2015/",
+			"image": "jackbox/you-dont-know-jack-2015.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 4,
+			"duration": "20m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
+		},
+		{
+			"name": "Fibbage XL",
+			"summary": "In Fibbage XL, players are presented with an obscure trivia fact that’s missing one key detail. The objective is to fill in the blank so that it fools others into thinking it’s the truth",
+			"description": "Baby? Rabbit? Ham sandwich? It’s up to you! Just make sure it’s somewhat plausible in order to rack up points. When everyone’s submissions are presented anonymously, it’s up to you to see if you can spot which absurd answer is actually the truth.\nPlayers can also play for the coveted “Thumbs Cup,” which awards bonus points to the answers that are especially clever. That’s right. You can finally impress your family with a pointless trophy!",
+			"url": "https://www.jackboxgames.com/fibbage-xl/",
+			"image": "jackbox/fibbage-xl.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"duration": "15-20m",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false
+		},
+		{
+			"name": "Drawful",
+			"summary": "Since 2014, partygoers have attempted to draw absurd things like “Napoleon riding a squirrel” and “Smelly CEO.” As a result, a lot of hilariously bad art has been created. We’re proud to say that this is one of our biggest contributions to society.",
+			"description": "In Drawful, each player receives a weird and unique prompt that they must try to draw on their mobile device (without the aid of an eraser). After each “artist” presents their work, everyone else anonymously submits a title that could fit this bizarre drawing. Your goal is to somehow find the correct prompt while fooling other players into selecting your decoy answer. Bonus points are awarded to those who submitted decoys that are especially clever or dumb… it’s usually the dumb ones.\nIt’s the perfect game for parties and streams where you want to reach peak goofiness. Just remember to bring your best drawing finger.",
+			"url": "https://www.jackboxgames.com/drawful/",
+			"image": "jackbox/drawful.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15-20m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
+		},
+		{
+			"name": "Word Spud",
+			"summary": "If you’re reading about Word Spud, congratulations. You’ve officially become a hardcore Jackbox Games fan. Word Spud is the racy-as-you-want-to-be fill-in-the-blank word game. One player is given a simple word, such as “real” or “life.” Then, the next player types in their own ideas for a witty word or phrase to follow it. Players vote to either keep the addition or nix it, then the spud passes to the next in line. The “goal” is for you and your friends to form the weirdest word cloud you can. But who cares about goals, man? Just drop all your hang-ups and enjoy the ride.",
+			"url": "https://www.jackboxgames.com/word-spud/",
+			"image": "jackbox/word-spud.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"duration": "Unlimited",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
+		},
+		{
+			"name": "Lie Swatter",
+			"summary": "In Lie Swatter, players are given a fact and must quickly decide if it’s True or a Lie. Get it wrong and the bug gets squashed! But get it right…and the bug also gets squashed, but you get points. Up to 100 players can drop in and out at any time, even after the game has already started.",
+			"description": "",
+			"url": "https://www.jackboxgames.com/lie-swatter/",
+			"image": "jackbox/lie-swatter.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 100,
+			"duration": "Unlimited",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
+		}
+	]
+}

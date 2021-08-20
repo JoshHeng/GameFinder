@@ -1,0 +1,22 @@
+{
+	"name": "",
+	"url": "https://www.jackboxgames.com/party-pack/",
+	"free": false,
+
+	"games": [
+		{
+			"name": "",
+			"summary": "",
+			"description": "",
+			"url": "",
+			"image": "",
+
+			"minPlayers": 1,
+			"maxPlayers": 1,
+			"duration": "10m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
+		}
+	]
+}
