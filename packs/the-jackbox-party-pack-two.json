@@ -2,6 +2,7 @@
 	"name": "The Jackbox Party Pack 2",
 	"url": "https://www.jackboxgames.com/party-pack-two/",
 	"free": false,
+	"gradient": "from-yellow-400 to-red-500",
 
 	"games": [
 		{

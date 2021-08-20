@@ -14,12 +14,12 @@ export default function Home({ packs }) {
 
 		packs.forEach(pack => {
 			_games = _games.concat(pack.games.map(game => ({
-				pack: pack.name, 
+				pack, 
 				...game
 			})));
 		});
 
-		return _games;
+		return _games.sort(() => Math.random()-0.5);
 	}, [packs]);
 
   	return (
@@ -33,7 +33,7 @@ export default function Home({ packs }) {
 				<p className="text-lg font-semibold text-blue-600">Find the best online, multiplayer games</p>
 			</div>
 
-			<div className="flex mt-5">
+			<div className="flex flex-wrap mt-5 justify-center">
 				{ games.map((game, i) => <Game game={game} key={i} />) }
 			</div>
 		</div>
