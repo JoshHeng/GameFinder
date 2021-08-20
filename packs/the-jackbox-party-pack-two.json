@@ -1,5 +1,6 @@
 {
 	"name": "The Jackbox Party Pack 2",
+	"slug": "the-jackbox-party-pack-two",
 	"url": "https://www.jackboxgames.com/party-pack-two/",
 	"free": false,
 	"gradient": "from-yellow-400 to-red-500",
@@ -9,7 +10,7 @@
 			"name": "Fibbage 2",
 			"description": "Unlike the first Fibbage, there are more than 500 brand-new questions (2x the amount in the original) and the deFIBrillator, a new feature that removes all of the choices except for one lie and one truth!",
 			"url": "https://www.jackboxgames.com/fibbage-two/",
-			"image": "the-jackbox-party-pack-two/fibbage-two.webp",
+			"image": "fibbage-two.webp",
 
 			"minPlayers": 2,
 			"maxPlayers": 8,
@@ -22,7 +23,7 @@
 			"name": "Earwax",
 			"description": "In Earwax, players must creatively work within some constraints to produce an auditory experience that best captures a phrase. Let’s say you get the prompt: “The craziest football halftime show.” You then choose two sound effects from a short list that best sum up the prompt. A car alarm and a donkey braying? Sure. A donkey braying followed by a long fart sound? Now we’re talking.",
 			"url": "https://www.jackboxgames.com/earwax/",
-			"image": "the-jackbox-party-pack-two/earwax.webp",
+			"image": "earwax.webp",
 
 			"minPlayers": 3,
 			"maxPlayers": 8,
@@ -35,7 +36,7 @@
 			"name": "Bidiots",
 			"description": "In Bidiots, players are given a prompt to create a “masterpiece” on their mobile device. Then the auction begins. Throughout the bidding process, you are given hidden tips on your phone about which works of art (based on the prompt) are worth the most or least amount of money. Players bid accordingly and win by earning the highest profit with their purchased pieces. The problem? Well… let’s just say that paintings can look VERY abstract.",
 			"url": "https://www.jackboxgames.com/bidiots/",
-			"image": "the-jackbox-party-pack-two/bidiots.webp",
+			"image": "bidiots.webp",
 
 			"minPlayers": 3,
 			"maxPlayers": 6,
@@ -48,7 +49,7 @@
 			"name": "Quiplash XL",
 			"description": "There are no rules or correct answers. Trust your gut and type in your response. Your answer will be pitted against another player’s answer in a head-to-head battle. Other players – and even an audience of up to 10,000 people – then vote on their favorite answer. It’s that simple.",
 			"url": "https://www.jackboxgames.com/quiplash-xl/",
-			"image": "the-jackbox-party-pack-two/quiplash-xl.webp",
+			"image": "quiplash-xl.webp",
 
 			"minPlayers": 3,
 			"maxPlayers": 8,
@@ -61,7 +62,7 @@
 			"name": "Bomp Corp",
 			"description": "In Bomb Corp., each player receives different instructions on their phone and needs to share information with others to collectively complete the task in a short amount of time. If you don’t, you’ll ruin your chances of employment after college. Also, you’ll blow up and die.",
 			"url": "https://www.jackboxgames.com/bomb-corp/",
-			"image": "the-jackbox-party-pack-two/bomb-corp.webp",
+			"image": "bomb-corp.webp",
 
 			"minPlayers": 1,
 			"maxPlayers": 4,

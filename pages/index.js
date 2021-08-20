@@ -43,15 +43,20 @@ export default function Home({ packs }) {
 export async function getStaticProps() {
 	const directory = path.join(process.cwd(), 'packs');
 
-	const packs = await Promise.all((await fs.readdir(directory)).filter(fileName => fileName.endsWith('.json') && !fileName.startsWith('_')).map(async fileName => JSON.parse(await fs.readFile(path.join(directory, fileName)))));
+	let packs = (await fs.readdir(directory)).filter(fileName => fileName.endsWith('.json') && !fileName.startsWith('_')).map(async fileName => JSON.parse(await fs.readFile(path.join(directory, fileName))));
+	packs = await Promise.all(packs);
 
 	const imagesDirectory = path.join(process.cwd(), 'public', 'images');
 	packs.forEach(pack => {
 		pack.games.forEach(game => {
 			if (game.image) {
-				const dimensions = sizeOf(path.join(imagesDirectory, game.image));
-				game.imageWidth = dimensions.width;
-				game.imageHeight = dimensions.height;
+				const dimensions = sizeOf(path.join(imagesDirectory, pack.slug, game.image));
+
+				game.image = {
+					src: `/images/${pack.slug}/${game.image}`,
+					width: dimensions.width,
+					height: dimensions.height
+				};
 			}
 		});
 	});

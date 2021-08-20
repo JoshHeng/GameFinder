@@ -1,5 +1,6 @@
 {
 	"name": "The Jackbox Party Pack",
+	"slug": "the-jackbox-party-pack",
 	"url": "https://www.jackboxgames.com/party-pack/",
 	"free": false,
 	"gradient": "from-green-500 to-blue-500",
@@ -9,7 +10,7 @@
 			"name": "YOU DON’T KNOW JACK 2015",
 			"description": "YOU DON’T KNOW JACK 2015 is the first Party Pack edition of your favorite game show, where high culture and pop culture collide! Enjoy the snarky trivia you know and love from the comfort of one of many digital platforms!",
 			"url": "https://www.jackboxgames.com/ydkj-2015/",
-			"image": "the-jackbox-party-pack/you-dont-know-jack-2015.webp",
+			"image": "you-dont-know-jack-2015.webp",
 
 			"minPlayers": 1,
 			"maxPlayers": 4,
@@ -22,7 +23,7 @@
 			"name": "Fibbage XL",
 			"description": "In Fibbage XL, players are presented with an obscure trivia fact that’s missing one key detail. The objective is to fill in the blank so that it fools others into thinking it’s the truth",
 			"url": "https://www.jackboxgames.com/fibbage-xl/",
-			"image": "the-jackbox-party-pack/fibbage-xl.webp",
+			"image": "fibbage-xl.webp",
 
 			"minPlayers": 2,
 			"maxPlayers": 8,
@@ -34,7 +35,7 @@
 		{
 			"name": "Drawful",
 			"description": "Since 2014, partygoers have attempted to draw absurd things like “Napoleon riding a squirrel” and “Smelly CEO.” As a result, a lot of hilariously bad art has been created. We’re proud to say that this is one of our biggest contributions to society.",
-			"image": "the-jackbox-party-pack/drawful.webp",
+			"image": "drawful.webp",
 
 			"minPlayers": 3,
 			"maxPlayers": 8,
@@ -47,7 +48,7 @@
 			"name": "Word Spud",
 			"description": "If you’re reading about Word Spud, congratulations. You’ve officially become a hardcore Jackbox Games fan. Word Spud is the racy-as-you-want-to-be fill-in-the-blank word game. One player is given a simple word, such as “real” or “life.” Then, the next player types in their own ideas for a witty word or phrase to follow it. Players vote to either keep the addition or nix it, then the spud passes to the next in line. The “goal” is for you and your friends to form the weirdest word cloud you can. But who cares about goals, man? Just drop all your hang-ups and enjoy the ride.",
 			"url": "https://www.jackboxgames.com/word-spud/",
-			"image": "the-jackbox-party-pack/word-spud.webp",
+			"image": "word-spud.webp",
 
 			"minPlayers": 2,
 			"maxPlayers": 8,
@@ -60,7 +61,7 @@
 			"name": "Lie Swatter",
 			"description": "In Lie Swatter, players are given a fact and must quickly decide if it’s True or a Lie. Get it wrong and the bug gets squashed! But get it right…and the bug also gets squashed, but you get points. Up to 100 players can drop in and out at any time, even after the game has already started.",
 			"url": "https://www.jackboxgames.com/lie-swatter/",
-			"image": "the-jackbox-party-pack/lie-swatter.webp",
+			"image": "lie-swatter.webp",
 
 			"minPlayers": 1,
 			"maxPlayers": 100,
