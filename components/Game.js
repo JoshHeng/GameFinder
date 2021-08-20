@@ -8,7 +8,7 @@ export default function Game({ game }) {
 			<div className="p-2">
 				<div className="text-gray-600 text-xs font-bold">{ game.pack }</div>
 				<h3 className="text-lg font-bold">{ game.name }</h3>
-				<blockquote className="font-medium">{ game.summary }</blockquote>
+				<blockquote className="font-medium">{ game.description }</blockquote>
 			</div>
 		</div>
 	)
