@@ -4,7 +4,7 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo, useState } from 'react';
 
-import { Container, Heading, Text, Flex, Box, Icon } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon, Center } from '@chakra-ui/react';
 import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
@@ -81,6 +81,10 @@ export default function Home({ packs }) {
 					<Text>No Games Found</Text>
 				</Box>
 			)}
+
+			<Center m="4" mt="10">
+				<Text>Made by <Text as="a" href="https://www.joshheng.co.uk" target="_blank" rel="noopener noreferrer" color="blue.600">Josh Heng</Text> | Open Source on <Text as="a" href="https://github.com/JoshHeng/GameFinder" target="_blank" rel="noopener noreferrer" color="blue.600">GitHub</Text></Text>
+			</Center>
 		</Container>
 	);
 }
