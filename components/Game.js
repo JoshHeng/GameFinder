@@ -29,7 +29,7 @@ export default function Game({ game }) {
 				</ListItem>
 			</List>
 
-			<GameTags tags={game.tags} />
+			<GameTags tags={game.tags} free={game.free} />
 		</Box>
 	);
 }

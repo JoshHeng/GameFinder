@@ -1,5 +1,5 @@
 import { Wrap, WrapItem, Tag, TagLeftIcon, TagLabel } from '@chakra-ui/react';
-import { FiEdit2, FiBook, FiUsers, FiBookmark } from 'react-icons/fi';
+import { FiEdit2, FiBook, FiUsers, FiBookmark, FiDollarSign } from 'react-icons/fi';
 import { BiQuestionMark, BiRocket, BiLaugh, BiUser } from 'react-icons/bi';
 
 function GameTag({ type }) {
@@ -60,6 +60,14 @@ function GameTag({ type }) {
 				</Tag>
 			);
 
+		case 'free':
+			return (
+				<Tag size="sm" colorScheme="gray">
+					<TagLeftIcon boxSize="12px" as={FiDollarSign} />
+					<TagLabel>Free</TagLabel>
+				</Tag>
+			);
+
 		default:
 			return (
 				<Tag size="sm" colorScheme="blue">
@@ -71,7 +79,7 @@ function GameTag({ type }) {
 }
 
 
-export default function GameTags({ tags }) {
+export default function GameTags({ tags, free }) {
 	return (
 		<Wrap spacing="5px" justify="center" m="3" mt="0">
 			{ tags && tags.map(tag => (
@@ -79,6 +87,11 @@ export default function GameTags({ tags }) {
 					<GameTag type={tag} />
 				</WrapItem>
 			))}
+			{ free && (
+				<WrapItem>
+					<GameTag type="free" />
+				</WrapItem>
+			)}
 		</Wrap>
 	)
 }

@@ -125,6 +125,7 @@ function processPacks(packs) {
 
 			return {
 				...game,
+				free: !pack.paid,
 				pack: {
 					name: pack.name,
 					gradient: pack.gradient || null

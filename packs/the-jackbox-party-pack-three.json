@@ -2,7 +2,7 @@
 	"name": "The Jackbox Party Pack 3",
 	"slug": "the-jackbox-party-pack-three",
 	"url": "https://www.jackboxgames.com/party-pack-three/",
-	"free": false,
+	"paid": true,
 	"gradient": "linear(to-tr, orange.300, orange.500)",
 
 	"games": [

@@ -2,7 +2,7 @@
 	"name": "The Jackbox Party Pack 6",
 	"slug": "the-jackbox-party-pack-six",
 	"url": "https://www.jackboxgames.com/party-pack-six/",
-	"free": false,
+	"paid": true,
 	"gradient": "linear(to-tr, blue.300, blue.500)",
 
 	"games": [
