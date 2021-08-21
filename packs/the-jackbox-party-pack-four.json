@@ -1,0 +1,75 @@
+{
+	"name": "The Jackbox Party Pack 4",
+	"slug": "the-jackbox-party-pack-four",
+	"url": "https://www.jackboxgames.com/party-pack-four/",
+	"free": false,
+	"gradient": "from-green-400 to-green-600",
+
+	"games": [
+		{
+			"name": "Fibbage 3",
+			"description": "The blanking fun sequel with all-new question types and the game mode Fibbage: Enough About You where you guess the weird facts about your friends.",
+			"url": "https://www.jackboxgames.com/fibbage-three/",
+			"image": "fibbage-three.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"duration": "15-20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 200
+		},
+		{
+			"name": "Survive the Internet",
+			"description": "The web-based frame game where you twist your friends’ “online” comments in hilarious ways. You’re familiar with the “Internet” right? The digital abyss of kittens, trolls, and pictures of that salt-sprinkling guy? Imagine a game that takes place within the Jackbox Games version of the Internet. It’s equally terrifying and rewarding at the same time and we call it Survive the Internet!",
+			"url": "https://www.jackboxgames.com/survive-the-internet/",
+			"image": "survive-the-internet.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Monster Seeking Monster",
+			"description": "The spooky date-a-thon where you message and date fellow monsters with special powers. Monster Seeking Monster is a dating-themed party game where players send each other secret messages trying to set up dates. After each round, you discover who chose to date each other… and who was betrayed.",
+			"url": "https://www.jackboxgames.com/monster-seeking-monster/",
+			"image": "monster-seeking-monster.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 7,
+			"duration": "15-20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 200
+		},
+		{
+			"name": "Bracketeering",
+			"description": "The deranged debate match where you place smart bets on stupid arguments. In Bracketeering, players submit answers to bizarre questions and categories like “Best thing to hold in your online dating profile picture” or “Coolest person to clone an army of.” Those answers then duke it out in a tournament-style instant-elimination bracket, until the championship answer is crowned.",
+			"url": "https://www.jackboxgames.com/bracketeering/",
+			"image": "bracketeering.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 16,
+			"duration": "15-20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Civic Doodle",
+			"description": "The one-up art game where you compete to improve the town murals. In Civic Doodle, the good people of Doodle Valley have enlisted you and your fellow players to beautify the town with ridiculous murals. ",
+			"url": "https://www.jackboxgames.com/civic-doodle/",
+			"image": "civic-doodle.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		}
+	]
+}

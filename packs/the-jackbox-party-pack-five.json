@@ -1,0 +1,75 @@
+{
+	"name": "The Jackbox Party Pack 5",
+	"slug": "the-jackbox-party-pack-five",
+	"url": "https://www.jackboxgames.com/product/the-jackbox-party-pack-5/",
+	"free": false,
+	"gradient": "from-teal-400 to-teal-600",
+
+	"games": [
+		{
+			"name": "YOU DON’T KNOW JACK: Full Stream",
+			"description": "The pop-culture trivia mash-up YOU DON’T KNOW JACK: Full Stream. The classic returns, full of wild new surprises.",
+			"url": "https://www.jackboxgames.com/ydkj-full-stream/",
+			"image": "you-dont-know-jack-full-stream.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 8,
+			"duration": "15-20m",
+			"familyFriendly": false,
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Split the Room",
+			"description": "The what-if game Split the Room. Create strange and divisive hypothetical situations.",
+			"url": "https://www.jackboxgames.com/split-the-room/",
+			"image": "split-the-room.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Mad Verse City",
+			"description": "The lyric-writing game Mad Verse City. Channel your inner MC as a rap battling robot.",
+			"url": "https://www.jackboxgames.com/mad-verse-city/",
+			"image": "mad-verse-city.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15-20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 200
+		},
+		{
+			"name": "Patently Stupid",
+			"description": "The competitive drawing game Patently Stupid. Create odd inventions to solve bizarre problems.",
+			"url": "https://www.jackboxgames.com/patently-stupid/",
+			"image": "patently-stupid.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "20m",
+			"familyFriendly": true,
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Zeeple Dome",
+			"description": "The deadliest game show in the Crab Nebula, Zeeple Dome! Fling yourself at bloodthirsty aliens to win millions of Zubabucks! Contestants will fling their bodies at bone-shattering speeds, all in the hopes of grabbing some fantastic prizes and tons of cash! Of course, there will be gruesome monsters in your way, but that’s half the fun!!!",
+			"url": "https://www.jackboxgames.com/zeeple-dome/",
+			"image": "zeeple-dome.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 6,
+			"duration": "10m+",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false
+		}
+	]
+}

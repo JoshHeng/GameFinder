@@ -1,0 +1,75 @@
+{
+	"name": "The Jackbox Party Pack 3",
+	"slug": "the-jackbox-party-pack-three",
+	"url": "https://www.jackboxgames.com/party-pack-three/",
+	"free": false,
+	"gradient": "from-orange-400 to-orange-600",
+
+	"games": [
+		{
+			"name": "Quiplash 2",
+			"description": "The say-anything sequel. Play all new questions or make your own! Players type in their best response to the prompt and then are pitted against each other in a head-to-head battle, while the rest of the players (and audience) vote on their favorite.",
+			"url": "https://www.jackboxgames.com/quiplash-two/",
+			"image": "quiplash-two.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Trivia Murder Party",
+			"description": "A deadly quiz show where you match wits with a trivia-obsessed killer. Answer trivia questions correctly in each round or you’ll find yourself on The Killing Floor, where players compete in devious minigames that determine whether they survive another round or become a ghost. ",
+			"url": "https://www.jackboxgames.com/trivia-murder-party/",
+			"image": "trivia-murder-party.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 8,
+			"duration": "15-20m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": 10000
+		},
+		{
+			"name": "Guesspionage",
+			"description": "The brain-battering data-mining guessing game. Guesspionage tests your knowledge of the human condition as you guess how real people responded to basic poll questions.",
+			"url": "https://www.jackboxgames.com/guesspionage/",
+			"image": "guesspionage.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"duration": "10-15m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Tee K.O.",
+			"description": "The t-shirt slugfest where you battle your custom t-shirts to the death! In Tee K.O., players are on the clock to create drawings and write as many slogans as possible. Then all the pictures and slogans are shuffled to other players at random. Whoever combines their drawings and slogans to create the best t-shirt wins, as designs are pitted against each other in head-to-head battles.",
+			"url": "https://www.jackboxgames.com/tee-ko/",
+			"image": "tee-ko.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "30m",
+			"familyFriendly": true,
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Fakin' It",
+			"description": "One of your friends has something to hide in this sneaky game for tricksters. In Fakin’ It, you can FINALLY discover how bad your friends are at lying, without any relationship-ending arguments!",
+			"url": "https://www.jackboxgames.com/fakin-it/",
+			"image": "fakin-it.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 6,
+			"duration": "15-20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		}
+	]
+}

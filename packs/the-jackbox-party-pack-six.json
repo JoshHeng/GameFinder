@@ -1,0 +1,75 @@
+{
+	"name": "The Jackbox Party Pack 6",
+	"slug": "the-jackbox-party-pack-six",
+	"url": "bg-gradient-to-tr from-indigo-400 to-indigo-600",
+	"free": false,
+	"gradient": "from-blue-400 to-blue-600",
+
+	"games": [
+		{
+			"name": "Trivia Murder Party 2",
+			"description": "The game show-loving serial killer from Trivia Murder Party is back, with more trivia and dastardly new mini-games. Can you and your friends survive a night in the Murder Hotel? Who will win? Who will you betray? When was the last time anyone cleaned these rooms?",
+			"url": "https://www.jackboxgames.com/trivia-murder-party-two/",
+			"image": "trivia-murder-party-two.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 8,
+			"duration": "15-25m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": 10000
+		},
+		{
+			"name": "Role Models",
+			"description": "The offbeat personality test Role Models. Find out who you really are. (Or at least what your friends think of you.)",
+			"url": "https://www.jackboxgames.com/role-models/",
+			"image": "role-models.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 6,
+			"duration": "15m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Joke Boat",
+			"description": "The comedy contest Joke Boat. Craft one-liners for a cruise ship talent show.",
+			"url": "https://www.jackboxgames.com/joke-boat/",
+			"image": "joke-boat.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15-25m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Dictionarium",
+			"description": "What is “blarnkt”? A type of fungus? The sound a sick pigeon makes? A stew served at weddings where the couple doesn’t really love each other? Don’t ask us, it’s up to you! Humans have been inventing words and phrases for centuries. Now it’s your turn to contribute an entry to the pages of the Dictionarium.",
+			"url": "https://www.jackboxgames.com/dictionarium/",
+			"image": "dictionarium.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "10m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Push The Button",
+			"description": "The hidden identity game Push The Button. Your ship has been invaded by aliens who look just like your best friends! Luckily, the ship’s AI, DODE (Digital Officer During Emergencies), has developed a series of creative tests that will determine if you’re human or a sneaky space creature trying to blend in. Find the aliens and eject them into space before the timer runs out or we’re all doomed!",
+			"url": "https://www.jackboxgames.com/push-the-button/",
+			"image": "push-the-button.webp",
+
+			"minPlayers": 4,
+			"maxPlayers": 10,
+			"duration": "Varies",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": false
+		}
+	]
+}

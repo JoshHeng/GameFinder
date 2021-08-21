@@ -1,0 +1,75 @@
+{
+	"name": "The Jackbox Party Pack 7",
+	"slug": "the-jackbox-party-pack-seven",
+	"url": "https://www.jackboxgames.com/party-pack-seven/",
+	"free": false,
+	"gradient": "from-indigo-400 to-indigo-600",
+
+	"games": [
+		{
+			"name": "Quiplash 3",
+			"description": "The say-anything threequel Quiplash 3. It’s a head-to-head battle of the wits as you give hilarious responses to quirky prompts while everyone else votes for their favorite!",
+			"url": "https://www.jackboxgames.com/quiplash-three/",
+			"image": "quiplash-three.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "The Devils and the Details",
+			"description": "The collaborative chaos game The Devils and the Details. In The Devils and The Details, you use your phone to tap, swipe, spin, and scrub your way through a fast and furious barrage of timed household tasks. Each player takes on the role of parent, teen, or kid, and many tasks require you to coordinate with others in the family. Get ready to whine at your best friend (who is now your mom) until they drive you to soccer practice. Or viciously scold your entire friend group for not helping you make dinner.",
+			"url": "https://www.jackboxgames.com/the-devils-and-the-details/",
+			"image": "the-devils-and-the-details.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15m",
+			"familyFriendly": "optional",
+			"manualCensoring": false,
+			"audience": 10000
+		},
+		{
+			"name": "Champ’d Up",
+			"description": "The drawing fighting game Champ’d Up. Create absurd characters that will battle over unusual titles. Can you take down the heavy favorite?",
+			"url": "https://www.jackboxgames.com/champd-up/",
+			"image": "champd-up.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Talking Points",
+			"description": "The on-the-spot public-speaking game Talking Points. Give a speech responding to picture slides you’ve never seen before or be the Assistant and approve pictures as fast as you can. Just keep talking whether it makes sense or not.",
+			"url": "https://www.jackboxgames.com/talking-points/",
+			"image": "talking-points.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "20-40m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000
+		},
+		{
+			"name": "Blather ‘Round",
+			"description": "Blather ‘Round is a guessing game full of blundering, stumbling, and–yes!– blathering. You write sentences to describe pop culture phenomena to your friends, but you never get quiiiiite the right words. If you did, it wouldn’t be a game! It would just be describing things.",
+			"url": "https://www.jackboxgames.com/blather-round/",
+			"image": "blather-round.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 6,
+			"duration": "15-30m",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": 10000
+		}
+	]
+}
