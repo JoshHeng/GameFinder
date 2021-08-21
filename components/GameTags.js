@@ -1,5 +1,6 @@
 import { Wrap, WrapItem, Tag, TagLeftIcon, TagLabel } from '@chakra-ui/react';
-import { FiEdit2, FiBook, FiUsers, BiQuestionMark, BiRocket, BiLaugh, FiBookmark } from 'react-icons/fi';
+import { FiEdit2, FiBook, FiUsers, FiBookmark } from 'react-icons/fi';
+import { BiQuestionMark, BiRocket, BiLaugh, BiUser } from 'react-icons/bi';
 
 function GameTag({ type }) {
 	switch (type) {

@@ -17,11 +17,13 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 200
+			"audience": 200,
+
+			"tags": ["words", "personal"]
 		},
 		{
 			"name": "Survive the Internet",
-			"description": "The web-based frame game where you twist your friends’ “online” comments in hilarious ways. You’re familiar with the “Internet” right? The digital abyss of kittens, trolls, and pictures of that salt-sprinkling guy? Imagine a game that takes place within the Jackbox Games version of the Internet. It’s equally terrifying and rewarding at the same time and we call it Survive the Internet!",
+			"description": "The web-based frame game where you twist your friends’ “online” comments in hilarious ways. You’re familiar with the “Internet” right? Imagine a game that takes place within the Jackbox Games version of the Internet. It’s equally terrifying and rewarding at the same time and we call it Survive the Internet!",
 			"url": "https://www.jackboxgames.com/survive-the-internet/",
 			"image": "survive-the-internet.webp",
 
@@ -30,11 +32,13 @@
 			"duration": "20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Monster Seeking Monster",
-			"description": "The spooky date-a-thon where you message and date fellow monsters with special powers. Monster Seeking Monster is a dating-themed party game where players send each other secret messages trying to set up dates. After each round, you discover who chose to date each other… and who was betrayed.",
+			"description": "The spooky date-a-thon where you message and date fellow monsters with special powers. A dating-themed party game where players send each other secret messages trying to set up dates. After each round, you discover who chose to date each other… and who was betrayed.",
 			"url": "https://www.jackboxgames.com/monster-seeking-monster/",
 			"image": "monster-seeking-monster.webp",
 
@@ -43,11 +47,13 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 200
+			"audience": 200,
+
+			"tags": ["words", "personal"]
 		},
 		{
 			"name": "Bracketeering",
-			"description": "The deranged debate match where you place smart bets on stupid arguments. In Bracketeering, players submit answers to bizarre questions and categories like “Best thing to hold in your online dating profile picture” or “Coolest person to clone an army of.” Those answers then duke it out in a tournament-style instant-elimination bracket, until the championship answer is crowned.",
+			"description": "The deranged debate match where you place smart bets on stupid arguments. Players submit answers to bizarre questions and categories. Those answers then duke it out in a tournament-style instant-elimination bracket, until the championship answer is crowned.",
 			"url": "https://www.jackboxgames.com/bracketeering/",
 			"image": "bracketeering.webp",
 
@@ -56,7 +62,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Civic Doodle",
@@ -69,7 +77,9 @@
 			"duration": "20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["drawing"]
 		}
 	]
 }

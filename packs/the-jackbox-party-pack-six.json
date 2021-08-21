@@ -17,7 +17,9 @@
 			"duration": "15-25m",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["trivia"]
 		},
 		{
 			"name": "Role Models",
@@ -30,7 +32,9 @@
 			"duration": "15m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["personal"]
 		},
 		{
 			"name": "Joke Boat",
@@ -43,7 +47,9 @@
 			"duration": "15-25m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Dictionarium",
@@ -56,11 +62,13 @@
 			"duration": "10m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words"]
 		},
 		{
 			"name": "Push The Button",
-			"description": "The hidden identity game Push The Button. Your ship has been invaded by aliens who look just like your best friends! Luckily, the ship’s AI, DODE (Digital Officer During Emergencies), has developed a series of creative tests that will determine if you’re human or a sneaky space creature trying to blend in. Find the aliens and eject them into space before the timer runs out or we’re all doomed!",
+			"description": "Your ship has been invaded by aliens who look just like your best friends! Luckily, the ship’s AI has developed a series of creative tests that will determine if you’re human or a sneaky space creature trying to blend in. Find the aliens and eject them into space before the timer runs out or we’re all doomed!",
 			"url": "https://www.jackboxgames.com/push-the-button/",
 			"image": "push-the-button.webp",
 
@@ -69,7 +77,9 @@
 			"duration": "Varies",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": false
+			"audience": false,
+
+			"tags": ["coop"]
 		}
 	]
 }

@@ -17,11 +17,13 @@
 			"duration": "15m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "The Devils and the Details",
-			"description": "The collaborative chaos game The Devils and the Details. In The Devils and The Details, you use your phone to tap, swipe, spin, and scrub your way through a fast and furious barrage of timed household tasks. Each player takes on the role of parent, teen, or kid, and many tasks require you to coordinate with others in the family. Get ready to whine at your best friend (who is now your mom) until they drive you to soccer practice. Or viciously scold your entire friend group for not helping you make dinner.",
+			"description": "The collaborative chaos game The Devils and the Details. In The Devils and The Details, you use your phone to tap, swipe, spin, and scrub your way through a fast and furious barrage of timed household tasks. Each player takes on the role of parent, teen, or kid, and many tasks require you to coordinate with others in the family.",
 			"url": "https://www.jackboxgames.com/the-devils-and-the-details/",
 			"image": "the-devils-and-the-details.webp",
 
@@ -30,7 +32,9 @@
 			"duration": "15m",
 			"familyFriendly": "optional",
 			"manualCensoring": false,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["coop"]
 		},
 		{
 			"name": "Champ’d Up",
@@ -43,7 +47,9 @@
 			"duration": "20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "drawing"]
 		},
 		{
 			"name": "Talking Points",
@@ -56,11 +62,13 @@
 			"duration": "20-40m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Blather ‘Round",
-			"description": "Blather ‘Round is a guessing game full of blundering, stumbling, and–yes!– blathering. You write sentences to describe pop culture phenomena to your friends, but you never get quiiiiite the right words. If you did, it wouldn’t be a game! It would just be describing things.",
+			"description": "The first thing you do in Blather ‘Round is choose a prompt. It could be a person, place, thing or story. Then, everyone takes a turn presenting. When it’s your turn, you describe your prompt by tapping words to fill out a sentence. But your options are very limited! You might want to call Scooby Doo a “cartoon dog detective” but you might end up calling him a “ravenous mystery beast.”",
 			"url": "https://www.jackboxgames.com/blather-round/",
 			"image": "blather-round.webp",
 
@@ -69,7 +77,9 @@
 			"duration": "15-30m",
 			"familyFriendly": true,
 			"manualCensoring": false,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		}
 	]
 }
