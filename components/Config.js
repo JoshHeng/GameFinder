@@ -1,5 +1,6 @@
 import { Heading, Box, Slider, SliderTrack, SliderFilledTrack, SliderThumb, FormControl, FormLabel, RadioGroup, Radio, Stack, Icon } from '@chakra-ui/react';
 import { FiUsers, FiSmile } from 'react-icons/fi';
+import { BiInfinite } from 'react-icons/bi';
 
 export default function Config({ config, setConfig }) {
 	function setSetting(name, val) {
@@ -17,13 +18,13 @@ export default function Config({ config, setConfig }) {
 			<form>
 				<FormControl id="people">
 					<FormLabel fontWeight="bold"><Icon as={FiUsers} mr="1" />People</FormLabel>
-					<Slider value={config.people} min={1} max={20} onChange={val => setSetting('people', val)}>
+					<Slider value={config.people} min={0} max={20} onChange={val => setSetting('people', val)}>
 						<SliderTrack bg="blue.100">
 							<Box position="relative" right={10} />
 							<SliderFilledTrack bg="blue.400" />
 						</SliderTrack>
 						<SliderThumb boxSize={6}>
-							{ config.people }
+							{ config.people || <Icon as={BiInfinite} /> }
 						</SliderThumb>
 					</Slider>
 				</FormControl>

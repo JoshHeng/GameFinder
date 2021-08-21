@@ -12,7 +12,7 @@ import Config from '../components/Config';
 
 export default function Home({ packs }) {
 	const [ config, setConfig ] = useState({
-		people: 4,
+		people: 0,
 		familyFriendly: "0"
 	});
 
@@ -25,14 +25,8 @@ export default function Home({ packs }) {
 			_games = _games.concat(pack.games);
 		});
 
-		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && game.maxPlayers >= config.people);
-		if (config.familyFriendly) {
-			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
-			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
-		}
-
 		return _games;
-	}, [config, packs]);
+	}, [packs]);
 
 	const filteredGames = useMemo(() => {
 		let _games = games.slice();
@@ -69,15 +63,19 @@ export default function Home({ packs }) {
 
 			<Config config={config} setConfig={setConfig} />
 
-			<Flex justify="center" wrap="wrap">
-				{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
-				{ filteredGames.length === 0 && (
-					<Box textAlign="center" mt="5">
-						<Icon as={FiFrown} w="7" h="7" color="gray.600" />
-						<Text>No Games Found</Text>
-					</Box>
-				)}
-			</Flex>
+			{ filteredGames.length > 0 ? (
+				<Box textAlign="center">
+					<Text mb="2" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
+					<Flex justify="center" wrap="wrap">
+						{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
+					</Flex>
+				</Box>
+			) : (
+				<Box textAlign="center" mt="5">
+					<Icon as={FiFrown} w="7" h="7" color="gray.600" />
+					<Text>No Games Found</Text>
+				</Box>
+			)}
 		</Container>
 	);
 }
