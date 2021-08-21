@@ -14,7 +14,10 @@ export default function Home({ packs }) {
 
 		packs.forEach(pack => {
 			_games = _games.concat(pack.games.map(game => ({
-				pack, 
+				pack: {
+					name: pack.name,
+					gradient: pack.gradient
+				},
 				...game
 			})));
 		});

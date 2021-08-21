@@ -3,7 +3,7 @@
 	"slug": "the-jackbox-party-pack-seven",
 	"url": "https://www.jackboxgames.com/party-pack-seven/",
 	"free": false,
-	"gradient": "from-indigo-400 to-indigo-600",
+	"gradient": "from-purple-300 to-purple-500",
 
 	"games": [
 		{
