@@ -12,7 +12,7 @@
 
 			"minPlayers": 1,
 			"maxPlayers": 30,
-			"familyFriendly": false,
+			"familyFriendly": true,
 			"manualCensoring": false,
 			"audience": false,
 
@@ -27,7 +27,7 @@
 
 			"minPlayers": 2,
 			"maxPlayers": 12,
-			"familyFriendly": false,
+			"familyFriendly": true,
 			"manualCensoring": false,
 			"audience": false,
 
@@ -63,6 +63,51 @@
 			"audience": false,
 
 			"tags": ["funny"]
+		},
+		{
+			"name": "Jstris",
+			"description": "Multiplayer Tetris!",
+			"url": "https://jstris.jezevec10.com/",
+			"image": "jstris.png",
+			"gradient": "linear(to-tr, cyan.600, purple.600)",
+
+			"minPlayers": 1,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": true,
+
+			"tags": ["action"]
+		},
+		{
+			"name": "Geoguessr",
+			"description": "GeoGuessr is a geography game which takes you on a journey around the world and challenges your ability to recognize your surroundings.",
+			"url": "https://www.geoguessr.com",
+			"image": "geoguessr.jpg",
+			"gradient": "linear(to-tr, teal.600, blue.500)",
+
+			"minPlayers": 1,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "TETR.IO",
+			"description": "Multiplayer Tetris!",
+			"url": "https://tetr.io/",
+			"image": "tetrio.png",
+			"gradient": "linear(to-tr, cyan.600, purple.600)",
+
+			"minPlayers": 1,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": true,
+
+			"tags": ["action"]
 		}
 	]
 }
