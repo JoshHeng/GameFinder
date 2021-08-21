@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Heading, Text, Box, List, ListItem, ListIcon } from '@chakra-ui/react';
-import{ FiUsers, FiClock, FiSmile } from 'react-icons/fi'
+import { FiUsers, FiClock, FiSmile } from 'react-icons/fi'
+import GameTags from './GameTags';
 
 export default function Game({ game }) {
 	return (
@@ -27,6 +28,8 @@ export default function Game({ game }) {
 					<Text as="span" fontWeight="bold">Family Friendly: </Text>{game.familyFriendly === true ? 'Yes' : (game.familyFriendly === 'optional' ? 'Optional' : 'No')}
 				</ListItem>
 			</List>
+
+			<GameTags tags={game.tags} />
 		</Box>
 	);
 }
