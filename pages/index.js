@@ -15,13 +15,7 @@ export default function Home({ packs }) {
 		let _games = [];
 
 		packs.forEach(pack => {
-			_games = _games.concat(pack.games.map(game => ({
-				pack: {
-					name: pack.name,
-					gradient: pack.gradient
-				},
-				...game
-			})));
+			_games = _games.concat(pack.games);
 		});
 
 		return _games.sort(() => Math.random()-0.5);
@@ -39,21 +33,36 @@ export default function Home({ packs }) {
 			</Box>
 
 			<Flex justify="center" wrap="wrap">
-				{ games.map((game, i) => <Game game={game} key={i} />) }
+				{ games.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
 			</Flex>
 		</Container>
 	);
 }
 
-export async function getStaticProps() {
+/**
+ * Gets the packs from the packs directory
+ * @returns {Promise<Object[]>} Array of game packs
+ */
+async function getPacks() {
 	const directory = path.join(process.cwd(), 'packs');
 
-	let packs = (await fs.readdir(directory)).filter(fileName => fileName.endsWith('.json') && !fileName.startsWith('_')).map(async fileName => JSON.parse(await fs.readFile(path.join(directory, fileName))));
-	packs = await Promise.all(packs);
+	const packFiles = (await fs.readdir(directory)).filter(fileName => fileName.endsWith('.json') && !fileName.startsWith('_'));
+	const packs = packFiles.map(async fileName => JSON.parse(await fs.readFile(path.join(directory, fileName))));
 
+	return await Promise.all(packs);
+}
+
+/**
+ * Converts game packs to a better format, converting images and adding pack data to each game
+ * @param {Object[]} packs Array of game packs
+ * @returns {Object[]} Array of game packs
+ */
+function processPacks(packs) {
 	const imagesDirectory = path.join(process.cwd(), 'public', 'images');
-	packs.forEach(pack => {
-		pack.games.forEach(game => {
+
+	packs= packs.map(pack => ({
+		...pack,
+		games: pack.games.map(game => {
 			if (game.image) {
 				const dimensions = sizeOf(path.join(imagesDirectory, pack.slug, game.image));
 				if (!dimensions) game.image = null;
@@ -64,7 +73,6 @@ export async function getStaticProps() {
 					height: dimensions.height
 				};
 			}
-			
 			if (!game.image) {
 				const dimensions = sizeOf(path.join(imagesDirectory, 'default.jpg'));
 				game.image = {
@@ -73,8 +81,24 @@ export async function getStaticProps() {
 					height: dimensions.height
 				};
 			}
-		});
-	});
+
+			return {
+				...game,
+				pack: {
+					name: pack.name,
+					gradient: pack.gradient || null
+				}
+			}
+		})
+	}));
+
+	return packs;
+}
+
+export async function getStaticProps() {
+	let packs = await getPacks();
+
+	packs = processPacks(packs);
 
 	return {
 		props: {

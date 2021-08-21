@@ -8,7 +8,7 @@ export default function Game({ game }) {
 
 			<Box p="2">
 				<Text fontWeight="bold" color="gray.600" size="xs">{ game.pack.name }</Text>
-				<Heading as="h3" size="lg" fontWeight="bold">{ game.name }</Heading>
+				<Heading as="h3" size="md" fontWeight="bold">{ game.name }</Heading>
 				<Text fontWeight="medium">{ game.description }</Text>
 			</Box>
 		</Box>
