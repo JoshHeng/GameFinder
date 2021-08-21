@@ -6,7 +6,7 @@ import GameTags from './GameTags';
 
 export default function Game({ game }) {
 	return (
-		<Box borderWidth="1px" borderRadius="lg" boxShadow="lg" w="64" maxW="md" m="1" overflow="hidden" bgGradient={game.gradient || game.pack.gradient || 'linear(to-tr, green.300, blue.500, purple.600)'} flexGrow="1" flexShrink="1" flexBasis="auto" flexDir="column" style={{ display: 'flex' }} as={ game.url ? "a" : undefined } href={game.url} rel="noopener noreferrer" target="_blank">
+		<Box borderWidth="1px" borderRadius="lg" boxShadow="lg" w="64" maxW="md" m="1" overflow="hidden" bgGradient={game.gradient || game.pack.gradient || 'linear(to-tr, green.300, blue.500, purple.600)'} flexGrow="1" flexShrink="1" flexBasis="auto" flexDir="column" style={{ display: 'flex' }} as={ game.url ? "a" : "div" } href={game.url} rel="noopener noreferrer" target="_blank">
 			<Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" />
 
 			<Box p="2">
