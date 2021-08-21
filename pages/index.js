@@ -31,7 +31,7 @@ export default function Home({ packs }) {
 	const filteredGames = useMemo(() => {
 		let _games = games.slice();
 
-		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && game.maxPlayers >= config.people);
+		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && (game.maxPlayers === 'unlimited' || game.maxPlayers >= config.people));
 		if (config.familyFriendly) {
 			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
 			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
