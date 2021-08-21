@@ -43,7 +43,7 @@ export default function Game({ game }) {
 				</ListItem>
 			</List>
 
-			<GameTags tags={game.tags} free={game.free} />
+			<GameTags tags={game.tags} />
 		</Box>
 	);
 }

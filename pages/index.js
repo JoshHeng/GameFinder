@@ -36,6 +36,11 @@ export default function Home({ packs }) {
 			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
 			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
 		}
+		if (config.tags && config.tags.length > 0) {
+			for (const tag of config.tags) {
+				_games = _games.filter(game => game.tags && game.tags.includes(tag));
+			}
+		}
 
 		return _games;
 	}, [config, games]);
@@ -123,9 +128,12 @@ function processPacks(packs) {
 				};
 			}
 
+			const tags = game.tags || [];
+			if (!pack.paid) tags.push('free');
+
 			return {
 				...game,
-				free: !pack.paid,
+				tags,
 				pack: {
 					name: pack.name,
 					gradient: pack.gradient || null,
