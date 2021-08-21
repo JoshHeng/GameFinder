@@ -2,7 +2,7 @@
 	"name": "The Jackbox Party Pack 5",
 	"slug": "the-jackbox-party-pack-five",
 	"url": "https://www.jackboxgames.com/product/the-jackbox-party-pack-5/",
-	"free": false,
+	"paid": true,
 	"gradient": "linear(to-tr, purple.300, purple.500)",
 
 	"games": [

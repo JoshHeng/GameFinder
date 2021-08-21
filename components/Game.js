@@ -9,8 +9,22 @@ export default function Game({ game }) {
 			<Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" />
 
 			<Box p="2">
-				<Text fontWeight="bold" color="gray.600" size="xs">{ game.pack.name }</Text>
-				<Heading as="h3" size="md" fontWeight="bold">{ game.name }</Heading>
+				{ game.pack.name && (
+					game.pack.url ? (
+						<a href={game.pack.url} rel="noopener noreferrer" target="_blank">
+							<Text fontWeight="bold" color="gray.200" size="xs">{ game.pack.name }</Text>
+						</a>
+					) :
+					<Text fontWeight="bold" color="gray.200" size="xs">{ game.pack.name }</Text>
+				)}
+
+				{ game.url ? (
+					<a href={game.url} rel="noopener noreferrer" target="_blank">
+						<Heading as="h3" size="md" fontWeight="bold">{ game.name }</Heading>
+					</a>
+				) :
+					<Heading as="h3" size="md" fontWeight="bold">{ game.name }</Heading>
+				}
 				<Text fontWeight="medium">{ game.description }</Text>
 			</Box>
 

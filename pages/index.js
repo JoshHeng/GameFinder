@@ -4,7 +4,7 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo, useState } from 'react';
 
-import { Container, Heading, Text, Flex, Box, Icon } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon, Center } from '@chakra-ui/react';
 import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
@@ -12,7 +12,7 @@ import Config from '../components/Config';
 
 export default function Home({ packs }) {
 	const [ config, setConfig ] = useState({
-		people: 4,
+		people: 0,
 		familyFriendly: "0"
 	});
 
@@ -25,14 +25,8 @@ export default function Home({ packs }) {
 			_games = _games.concat(pack.games);
 		});
 
-		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && game.maxPlayers >= config.people);
-		if (config.familyFriendly) {
-			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
-			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
-		}
-
 		return _games;
-	}, [config, packs]);
+	}, [packs]);
 
 	const filteredGames = useMemo(() => {
 		let _games = games.slice();
@@ -42,6 +36,11 @@ export default function Home({ packs }) {
 			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
 			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
 		}
+		if (config.tags && config.tags.length > 0) {
+			for (const tag of config.tags) {
+				_games = _games.filter(game => game.tags && game.tags.includes(tag));
+			}
+		}
 
 		return _games;
 	}, [config, games]);
@@ -50,11 +49,13 @@ export default function Home({ packs }) {
 		<Container maxW="container.xl">
 			<Head>
 				<title>Game Finder</title>
+				<meta name="description" content="Find the best online multiplayer games" />
+				<meta property="og:description" content="Find the best online multiplayer games" />
+
 				<meta property="og:title" content="Game Finder" />
 				<meta property="og:url" content="https://games.joshheng.co.uk" />
 				<meta property="og:image" content="https://games.joshheng.co.uk/image.png" />
 				<meta property="og:type" content="website" />
-				<meta property="og:description" content="Find the best online multiplayer games" />
 				<meta property="og:locale" content="en_GB" />
 
 				<link rel="shortcut icon" type="image/png" href="https://games.joshheng.co.uk/favicon.png" />
@@ -67,15 +68,23 @@ export default function Home({ packs }) {
 
 			<Config config={config} setConfig={setConfig} />
 
-			<Flex justify="center" wrap="wrap">
-				{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
-				{ filteredGames.length === 0 && (
-					<Box textAlign="center" mt="5">
-						<Icon as={FiFrown} w="7" h="7" color="gray.600" />
-						<Text>No Games Found</Text>
-					</Box>
-				)}
-			</Flex>
+			{ filteredGames.length > 0 ? (
+				<Box textAlign="center">
+					<Text mb="2" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
+					<Flex justify="center" wrap="wrap">
+						{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
+					</Flex>
+				</Box>
+			) : (
+				<Box textAlign="center" mt="5">
+					<Icon as={FiFrown} w="7" h="7" color="gray.600" />
+					<Text>No Games Found</Text>
+				</Box>
+			)}
+
+			<Center m="4" mt="10">
+				<Text>Made by <Text as="a" href="https://www.joshheng.co.uk" target="_blank" rel="noopener noreferrer" color="blue.600">Josh Heng</Text> | Open Source on <Text as="a" href="https://github.com/JoshHeng/GameFinder" target="_blank" rel="noopener noreferrer" color="blue.600">GitHub</Text></Text>
+			</Center>
 		</Container>
 	);
 }
@@ -123,11 +132,16 @@ function processPacks(packs) {
 				};
 			}
 
+			const tags = game.tags || [];
+			if (!pack.paid) tags.push('free');
+
 			return {
 				...game,
+				tags,
 				pack: {
 					name: pack.name,
-					gradient: pack.gradient || null
+					gradient: pack.gradient || null,
+					url: pack.url || null
 				}
 			}
 		})

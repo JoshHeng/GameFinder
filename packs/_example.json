@@ -2,7 +2,7 @@
 	"name": "",
 	"slug": "",
 	"url": "",
-	"free": false,
+	"paid": true,
 	"gradient": "linear(to-tr, , )",
 
 	"games": [
