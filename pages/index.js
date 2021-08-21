@@ -50,11 +50,19 @@ export default function Home({ packs }) {
 		<Container maxW="container.xl">
 			<Head>
 				<title>Game Finder</title>
+				<meta property="og:title" content="Game Finder" />
+				<meta property="og:url" content="https://games.joshheng.co.uk" />
+				<meta property="og:image" content="https://games.joshheng.co.uk/image.png" />
+				<meta property="og:type" content="website" />
+				<meta property="og:description" content="Find the best online multiplayer games" />
+				<meta property="og:locale" content="en_GB" />
+
+				<link rel="shortcut icon" type="image/png" href="https://games.joshheng.co.uk/favicon.png" />
 			</Head>
 
-			<Box>
+			<Box mt="4">
 				<Heading as="h1" size="xl" color="blue.700">Game Finder</Heading>
-				<Text color="blue.600">Find the best online, multiplayer games</Text>
+				<Text color="blue.600">Find the best online multiplayer games</Text>
 			</Box>
 
 			<Config config={config} setConfig={setConfig} />
