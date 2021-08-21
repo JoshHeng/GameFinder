@@ -17,7 +17,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": false,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Earwax",
@@ -30,7 +32,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 200
+			"audience": 200,
+
+			"tags": []
 		},
 		{
 			"name": "Bidiots",
@@ -43,7 +47,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": false
+			"audience": false,
+
+			"tags": ["drawing"]
 		},
 		{
 			"name": "Quiplash XL",
@@ -56,7 +62,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": false
+			"audience": false,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Bomp Corp",
@@ -69,7 +77,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": false
+			"audience": false,
+
+			"tags": ["coop"]
 		}
 	]
 }

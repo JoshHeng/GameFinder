@@ -2,13 +2,20 @@ import Head from 'next/head'
 import { promises as fs } from 'fs'
 import sizeOf from 'image-size';
 import path from 'path'
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
-import { Container, Heading, Text, Flex, Box } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon } from '@chakra-ui/react';
+import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
+import Config from '../components/Config';
 
 export default function Home({ packs }) {
+	const [ config, setConfig ] = useState({
+		people: 4,
+		familyFriendly: "0"
+	});
+
 	const games = useMemo(() => {
 		if (!packs) return [];
 
@@ -18,22 +25,56 @@ export default function Home({ packs }) {
 			_games = _games.concat(pack.games);
 		});
 
-		return _games.sort(() => Math.random()-0.5);
-	}, [packs]);
+		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && game.maxPlayers >= config.people);
+		if (config.familyFriendly) {
+			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
+			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
+		}
+
+		return _games;
+	}, [config, packs]);
+
+	const filteredGames = useMemo(() => {
+		let _games = games.slice();
+
+		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && game.maxPlayers >= config.people);
+		if (config.familyFriendly) {
+			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
+			else if (config.familyFriendly === "1") _games = _games.filter(game => game.familyFriendly);
+		}
+
+		return _games;
+	}, [config, games]);
 
   	return (
 		<Container maxW="container.xl">
 			<Head>
 				<title>Game Finder</title>
+				<meta property="og:title" content="Game Finder" />
+				<meta property="og:url" content="https://games.joshheng.co.uk" />
+				<meta property="og:image" content="https://games.joshheng.co.uk/image.png" />
+				<meta property="og:type" content="website" />
+				<meta property="og:description" content="Find the best online multiplayer games" />
+				<meta property="og:locale" content="en_GB" />
+
+				<link rel="shortcut icon" type="image/png" href="https://games.joshheng.co.uk/favicon.png" />
 			</Head>
 
-			<Box>
+			<Box mt="4">
 				<Heading as="h1" size="xl" color="blue.700">Game Finder</Heading>
-				<Text color="blue.600">Find the best online, multiplayer games</Text>
+				<Text color="blue.600">Find the best online multiplayer games</Text>
 			</Box>
 
+			<Config config={config} setConfig={setConfig} />
+
 			<Flex justify="center" wrap="wrap">
-				{ games.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
+				{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
+				{ filteredGames.length === 0 && (
+					<Box textAlign="center" mt="5">
+						<Icon as={FiFrown} w="7" h="7" color="gray.600" />
+						<Text>No Games Found</Text>
+					</Box>
+				)}
 			</Flex>
 		</Container>
 	);

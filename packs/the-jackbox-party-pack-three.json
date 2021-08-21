@@ -17,7 +17,9 @@
 			"duration": "15m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Trivia Murder Party",
@@ -30,7 +32,9 @@
 			"duration": "15-20m",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["trivia"]
 		},
 		{
 			"name": "Guesspionage",
@@ -43,7 +47,9 @@
 			"duration": "10-15m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["trivia"]
 		},
 		{
 			"name": "Tee K.O.",
@@ -56,7 +62,9 @@
 			"duration": "30m",
 			"familyFriendly": true,
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["drawing"]
 		},
 		{
 			"name": "Fakin' It",
@@ -69,7 +77,9 @@
 			"duration": "15-20m",
 			"familyFriendly": "optional",
 			"manualCensoring": true,
-			"audience": 10000
+			"audience": 10000,
+
+			"tags": ["funny", "personal"]
 		}
 	]
 }

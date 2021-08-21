@@ -17,7 +17,9 @@
 			"duration": "20m",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": false
+			"audience": false,
+
+			"tags": ["trivia"]
 		},
 		{
 			"name": "Fibbage XL",
@@ -30,7 +32,9 @@
 			"duration": "15-20m",
 			"familyFriendly": true,
 			"manualCensoring": false,
-			"audience": false
+			"audience": false,
+
+			"tags": ["words", "funny"]
 		},
 		{
 			"name": "Drawful",
@@ -42,11 +46,13 @@
 			"duration": "15-20m",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": false
+			"audience": false,
+
+			"tags": ["drawing"]
 		},
 		{
 			"name": "Word Spud",
-			"description": "If you’re reading about Word Spud, congratulations. You’ve officially become a hardcore Jackbox Games fan. Word Spud is the racy-as-you-want-to-be fill-in-the-blank word game. One player is given a simple word, such as “real” or “life.” Then, the next player types in their own ideas for a witty word or phrase to follow it. Players vote to either keep the addition or nix it, then the spud passes to the next in line. The “goal” is for you and your friends to form the weirdest word cloud you can. But who cares about goals, man? Just drop all your hang-ups and enjoy the ride.",
+			"description": "Word Spud is the racy-as-you-want-to-be fill-in-the-blank word game. One player is given a simple word, such as “real” or “life.” Then, the next player types in their own ideas for a witty word or phrase to follow it. Players vote to either keep the addition or nix it, then the spud passes to the next in line. The “goal” is for you and your friends to form the weirdest word cloud you can.",
 			"url": "https://www.jackboxgames.com/word-spud/",
 			"image": "word-spud.webp",
 
@@ -55,7 +61,9 @@
 			"duration": "Unlimited",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": false
+			"audience": false,
+
+			"tags": ["words"]
 		},
 		{
 			"name": "Lie Swatter",
@@ -68,7 +76,9 @@
 			"duration": "Unlimited",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": false
+			"audience": false,
+
+			"tags": ["trivia"]
 		}
 	]
 }

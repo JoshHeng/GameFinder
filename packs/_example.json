@@ -17,7 +17,9 @@
 			"duration": "10m",
 			"familyFriendly": false,
 			"manualCensoring": false,
-			"audience": false
+			"audience": false,
+
+			"tags": []
 		}
 	]
 }
