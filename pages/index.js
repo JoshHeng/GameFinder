@@ -50,11 +50,13 @@ export default function Home({ packs }) {
 		<Container maxW="container.xl">
 			<Head>
 				<title>Game Finder</title>
+				<meta name="description" content="Find the best online multiplayer games" />
+				<meta property="og:description" content="Find the best online multiplayer games" />
+
 				<meta property="og:title" content="Game Finder" />
 				<meta property="og:url" content="https://games.joshheng.co.uk" />
 				<meta property="og:image" content="https://games.joshheng.co.uk/image.png" />
 				<meta property="og:type" content="website" />
-				<meta property="og:description" content="Find the best online multiplayer games" />
 				<meta property="og:locale" content="en_GB" />
 
 				<link rel="shortcut icon" type="image/png" href="https://games.joshheng.co.uk/favicon.png" />
