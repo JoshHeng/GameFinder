@@ -54,9 +54,19 @@ export async function getStaticProps() {
 		pack.games.forEach(game => {
 			if (game.image) {
 				const dimensions = sizeOf(path.join(imagesDirectory, pack.slug, game.image));
+				if (!dimensions) game.image = null;
 
 				game.image = {
 					src: `/images/${pack.slug}/${game.image}`,
+					width: dimensions.width,
+					height: dimensions.height
+				};
+			}
+			
+			if (!game.image) {
+				const dimensions = sizeOf(path.join(imagesDirectory, 'default.jpg'));
+				game.image = {
+					src: `/images/default.jpg`,
 					width: dimensions.width,
 					height: dimensions.height
 				};

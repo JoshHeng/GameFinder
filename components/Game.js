@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Game({ game }) {
 	return (
 		<div className={`bg-gradient-to-tr rounded-xl m-1 shadow-lg flex-auto w-64 max-w-md ${game.gradient || game.pack.gradient || 'from-purple-400 to-yellow-400'}`}>
-			{ game.image && <Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" className="rounded-t-lg" /> }
+			<Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" className="rounded-t-lg max-w-max object-cover" />
 
 			<div className="p-2">
 				<div className="text-gray-600 text-xs font-bold">{ game.pack.name }</div>

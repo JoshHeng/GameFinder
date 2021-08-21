@@ -28,6 +28,31 @@
 			"familyFriendly": false,
 			"manualCensoring": false,
 			"audience": false
+		},
+
+		{
+			"name": "Picture Cards Online",
+			"description": "Cards Against Humanity with pictures!",
+			"url": "https://picturecards.online",
+			"gradient": "from-blue-gray-500 to-yellow-100",
+
+			"minPlayers": 1,
+			"maxPlayers": 40,
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
+		},
+		{
+			"name": "YouTube Secret Stash",
+			"description": "Explore the weird side of YouTube and guess the name of the video!",
+			"url": "https://picturecards.online/x",
+			"gradient": "from-orange-600 to-orange-500",
+
+			"minPlayers": 1,
+			"maxPlayers": 100,
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false
 		}
 	]
 }
