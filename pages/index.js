@@ -4,6 +4,8 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo } from 'react';
 
+import { Container, Heading, Text, Flex, Box } from '@chakra-ui/react';
+
 import Game from '../components/Game';
 
 export default function Home({ packs }) {
@@ -26,20 +28,20 @@ export default function Home({ packs }) {
 	}, [packs]);
 
   	return (
-		<div className="container mx-auto px-4">
+		<Container maxW="container.xl">
 			<Head>
 				<title>Game Finder</title>
 			</Head>
 
-			<div className="mt-5">
-				<h1 className="text-3xl font-bold text-blue-700">Game Finder</h1>
-				<p className="text-lg font-semibold text-blue-600">Find the best online, multiplayer games</p>
-			</div>
+			<Box>
+				<Heading as="h1" size="xl" color="blue.700">Game Finder</Heading>
+				<Text color="blue.600">Find the best online, multiplayer games</Text>
+			</Box>
 
-			<div className="flex flex-wrap mt-5 justify-center">
+			<Flex justify="center" wrap="wrap">
 				{ games.map((game, i) => <Game game={game} key={i} />) }
-			</div>
-		</div>
+			</Flex>
+		</Container>
 	);
 }
 

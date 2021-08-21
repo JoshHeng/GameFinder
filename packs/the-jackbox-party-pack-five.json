@@ -3,7 +3,7 @@
 	"slug": "the-jackbox-party-pack-five",
 	"url": "https://www.jackboxgames.com/product/the-jackbox-party-pack-5/",
 	"free": false,
-	"gradient": "from-indigo-300 to-indigo-500",
+	"gradient": "linear(to-tr, purple.300, purple.500)",
 
 	"games": [
 		{

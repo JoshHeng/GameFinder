@@ -3,7 +3,7 @@
 	"slug": "the-jackbox-party-pack-four",
 	"url": "https://www.jackboxgames.com/party-pack-four/",
 	"free": false,
-	"gradient": "from-green-300 to-green-500",
+	"gradient": "linear(to-tr, green.300, green.500)",
 
 	"games": [
 		{
