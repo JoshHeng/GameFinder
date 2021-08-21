@@ -8,7 +8,7 @@
 			"description": "The online Telephone Game! Play now the popular game for free",
 			"url": "https://garticphone.com",
 			"image": "gartic-phone.png",
-			"gradient": "from-indigo-300 to-purple-400",
+			"gradient": "linear(to-tr, purple.400, pink.400)",
 
 			"minPlayers": 1,
 			"maxPlayers": 30,
@@ -21,7 +21,7 @@
 			"description": "skribbl io is a free multiplayer drawing and guessing game. Draw and guess words with your friends and people all around the world! Score the most points and be the winner!",
 			"url": "https://skribbl.io/",
 			"image": "skribblio.png",
-			"gradient": "from-sky-400 to-blue-500",
+			"gradient": "linear(to-tr, cyan.400, blue.500)",
 
 			"minPlayers": 2,
 			"maxPlayers": 12,
@@ -34,7 +34,7 @@
 			"name": "Picture Cards Online",
 			"description": "Cards Against Humanity with pictures!",
 			"url": "https://picturecards.online",
-			"gradient": "from-blue-gray-500 to-yellow-100",
+			"gradient": "linear(to-tr, gray.400, gray.600)",
 
 			"minPlayers": 1,
 			"maxPlayers": 40,
@@ -46,7 +46,7 @@
 			"name": "YouTube Secret Stash",
 			"description": "Explore the weird side of YouTube and guess the name of the video!",
 			"url": "https://picturecards.online/x",
-			"gradient": "from-orange-600 to-orange-500",
+			"gradient": "linear(to-tr, red.500, red.600)",
 
 			"minPlayers": 1,
 			"maxPlayers": 100,

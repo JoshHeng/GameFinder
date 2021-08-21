@@ -4,6 +4,8 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo } from 'react';
 
+import { Container, Heading, Text, Flex, Box } from '@chakra-ui/react';
+
 import Game from '../components/Game';
 
 export default function Home({ packs }) {
@@ -13,45 +15,54 @@ export default function Home({ packs }) {
 		let _games = [];
 
 		packs.forEach(pack => {
-			_games = _games.concat(pack.games.map(game => ({
-				pack: {
-					name: pack.name,
-					gradient: pack.gradient
-				},
-				...game
-			})));
+			_games = _games.concat(pack.games);
 		});
 
 		return _games.sort(() => Math.random()-0.5);
 	}, [packs]);
 
   	return (
-		<div className="container mx-auto px-4">
+		<Container maxW="container.xl">
 			<Head>
 				<title>Game Finder</title>
 			</Head>
 
-			<div className="mt-5">
-				<h1 className="text-3xl font-bold text-blue-700">Game Finder</h1>
-				<p className="text-lg font-semibold text-blue-600">Find the best online, multiplayer games</p>
-			</div>
+			<Box>
+				<Heading as="h1" size="xl" color="blue.700">Game Finder</Heading>
+				<Text color="blue.600">Find the best online, multiplayer games</Text>
+			</Box>
 
-			<div className="flex flex-wrap mt-5 justify-center">
-				{ games.map((game, i) => <Game game={game} key={i} />) }
-			</div>
-		</div>
+			<Flex justify="center" wrap="wrap">
+				{ games.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
+			</Flex>
+		</Container>
 	);
 }
 
-export async function getStaticProps() {
+/**
+ * Gets the packs from the packs directory
+ * @returns {Promise<Object[]>} Array of game packs
+ */
+async function getPacks() {
 	const directory = path.join(process.cwd(), 'packs');
 
-	let packs = (await fs.readdir(directory)).filter(fileName => fileName.endsWith('.json') && !fileName.startsWith('_')).map(async fileName => JSON.parse(await fs.readFile(path.join(directory, fileName))));
-	packs = await Promise.all(packs);
+	const packFiles = (await fs.readdir(directory)).filter(fileName => fileName.endsWith('.json') && !fileName.startsWith('_'));
+	const packs = packFiles.map(async fileName => JSON.parse(await fs.readFile(path.join(directory, fileName))));
 
+	return await Promise.all(packs);
+}
+
+/**
+ * Converts game packs to a better format, converting images and adding pack data to each game
+ * @param {Object[]} packs Array of game packs
+ * @returns {Object[]} Array of game packs
+ */
+function processPacks(packs) {
 	const imagesDirectory = path.join(process.cwd(), 'public', 'images');
-	packs.forEach(pack => {
-		pack.games.forEach(game => {
+
+	packs= packs.map(pack => ({
+		...pack,
+		games: pack.games.map(game => {
 			if (game.image) {
 				const dimensions = sizeOf(path.join(imagesDirectory, pack.slug, game.image));
 				if (!dimensions) game.image = null;
@@ -62,7 +73,6 @@ export async function getStaticProps() {
 					height: dimensions.height
 				};
 			}
-			
 			if (!game.image) {
 				const dimensions = sizeOf(path.join(imagesDirectory, 'default.jpg'));
 				game.image = {
@@ -71,8 +81,24 @@ export async function getStaticProps() {
 					height: dimensions.height
 				};
 			}
-		});
-	});
+
+			return {
+				...game,
+				pack: {
+					name: pack.name,
+					gradient: pack.gradient || null
+				}
+			}
+		})
+	}));
+
+	return packs;
+}
+
+export async function getStaticProps() {
+	let packs = await getPacks();
+
+	packs = processPacks(packs);
 
 	return {
 		props: {

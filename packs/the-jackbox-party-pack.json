@@ -3,7 +3,7 @@
 	"slug": "the-jackbox-party-pack",
 	"url": "https://www.jackboxgames.com/party-pack/",
 	"free": false,
-	"gradient": "from-yellow-300 to-yellow-500",
+	"gradient": "linear(to-tr, yellow.300, yellow.500)",
 	
 	"games": [
 		{

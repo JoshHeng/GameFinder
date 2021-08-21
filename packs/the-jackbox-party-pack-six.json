@@ -1,9 +1,9 @@
 {
 	"name": "The Jackbox Party Pack 6",
 	"slug": "the-jackbox-party-pack-six",
-	"url": "bg-gradient-to-tr from-indigo-400 to-indigo-600",
+	"url": "https://www.jackboxgames.com/party-pack-six/",
 	"free": false,
-	"gradient": "from-blue-300 to-blue-500",
+	"gradient": "linear(to-tr, blue.300, blue.500)",
 
 	"games": [
 		{

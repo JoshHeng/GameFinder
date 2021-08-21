@@ -3,7 +3,7 @@
 	"slug": "",
 	"url": "",
 	"free": false,
-	"gradient": "",
+	"gradient": "linear(to-tr, , )",
 
 	"games": [
 		{

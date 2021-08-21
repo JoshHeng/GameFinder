@@ -1,15 +1,32 @@
 import Image from 'next/image'
+import { Heading, Text, Box, List, ListItem, ListIcon } from '@chakra-ui/react';
+import{ FiUsers, FiClock, FiSmile } from 'react-icons/fi'
 
 export default function Game({ game }) {
 	return (
-		<div className={`bg-gradient-to-tr rounded-xl m-1 shadow-lg flex-auto w-64 max-w-md ${game.gradient || game.pack.gradient || 'from-purple-400 to-yellow-400'}`}>
-			<Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" className="rounded-t-lg max-w-max object-cover" />
+		<Box borderWidth="1px" borderRadius="lg" boxShadow="lg" w="64" maxW="md" m="1" overflow="hidden" bgGradient={game.gradient || game.pack.gradient || 'linear(to-tr, green.300, blue.500, purple.600)'} flexGrow="1" flexShrink="1" flexBasis="auto" flexDir="column" style={{ display: 'flex' }}>
+			<Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" />
 
-			<div className="p-2">
-				<div className="text-gray-600 text-xs font-bold">{ game.pack.name }</div>
-				<h3 className="text-lg font-bold">{ game.name }</h3>
-				<blockquote className="font-medium">{ game.description }</blockquote>
-			</div>
-		</div>
-	)
+			<Box p="2">
+				<Text fontWeight="bold" color="gray.600" size="xs">{ game.pack.name }</Text>
+				<Heading as="h3" size="md" fontWeight="bold">{ game.name }</Heading>
+				<Text fontWeight="medium">{ game.description }</Text>
+			</Box>
+
+			<List m="2" p="3" spacing="1" mt="auto">
+				<ListItem>
+					<ListIcon as={FiUsers} />
+					<Text as="span" fontWeight="bold">Players: </Text>{game.minPlayers}-{game.maxPlayers}
+				</ListItem>
+				<ListItem>
+					<ListIcon as={FiClock} />
+					<Text as="span" fontWeight="bold">Duration: </Text>{game.duration || 'Variable'}
+				</ListItem>
+				<ListItem>
+					<ListIcon as={FiSmile} />
+					<Text as="span" fontWeight="bold">Family Friendly: </Text>{game.familyFriendly === true ? 'Yes' : (game.familyFriendly === 'optional' ? 'Optional' : 'No')}
+				</ListItem>
+			</List>
+		</Box>
+	);
 }
