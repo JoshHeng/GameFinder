@@ -128,7 +128,8 @@ function processPacks(packs) {
 				free: !pack.paid,
 				pack: {
 					name: pack.name,
-					gradient: pack.gradient || null
+					gradient: pack.gradient || null,
+					url: pack.url || null
 				}
 			}
 		})
