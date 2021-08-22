@@ -35,6 +35,21 @@
 		},
 
 		{
+			"name": "Pretend You're Xyzzy",
+			"description": "Cards Against Humanity is a fill-in-the-blank party game that turns your awkward personality and lackluster social skills into hours of fun!",
+			"url": "https://pyx-1.pretendyoure.xyz/",
+			"image": "pretend-youre-xyzzy.jpg",
+			"gradient": "linear(to-tr, gray.400, gray.600)",
+
+			"minPlayers": 1,
+			"maxPlayers": 20,
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words", "funny"]
+		},
+		{
 			"name": "Picture Cards Online",
 			"description": "Cards Against Humanity is a fill-in-the-blank party game that turns your awkward personality and lackluster social skills into hours of fun! And now with pictures!",
 			"url": "https://picturecards.online",
@@ -108,6 +123,38 @@
 			"audience": true,
 
 			"tags": ["action"]
+		},
+
+		{
+			"name": "Scattergories",
+			"description": "An online version of Scattergories - race against the clock to fill a list of categories with words beginning with a certain letter.",
+			"url": "https://really.boring.website",
+			"image": "really-boring-website.jpg",
+			"gradient": "linear(to-br, purple.400, yellow.600)",
+
+			"minPlayers": 1,
+			"maxPlayers": 24,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words"]
+		},
+
+		{
+			"name": "Codenames",
+			"description": "Two teams compete to see who can make contact with all of their agents first, through hinting their codenames.",
+			"url": "https://codenames.game",
+			"image": "codenames.png",
+			"gradient": "linear(to-br, yellow.600, red.600)",
+
+			"minPlayers": 4,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words", "coop"]
 		}
 	]
 }

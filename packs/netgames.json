@@ -1,0 +1,109 @@
+{
+	"name": "Netgames",
+	"slug": "netgames",
+	"url": "https://netgames.io/games/",
+	"gradient": "linear(to-tr, cyan.500, cyan.700)",
+
+	"games": [
+		{
+			"name": "One Night Ultimate Werewolf",
+			"description": "Each player takes on the role of a Villager, a Werewolf, or a special character. It’s your job to figure out who the Werewolves are and to kill at least one of them in order to win... unless you’ve become a Werewolf yourself.",
+			"url": "https://netgames.io/games/onu-werewolf/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": 28,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["coop"]
+		},
+		{
+			"name": "Codewords",
+			"description": "Rival Codebreakers try to identify their Codewords before the enemy discovers theirs.",
+			"url": "https://netgames.io/games/codewords/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 4,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["coop", "words"]
+		},
+		{
+			"name": "Secret Sith",
+			"description": "The political fight between the Separatists and the Loyalists is putting the Galactic Republic under threat. Each side wishes to enact policies in line with their own agenda; if they enact enough, then the galaxy will be under their control.",
+			"url": "https://netgames.io/games/secret-sith/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 5,
+			"maxPlayers": 10,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["coop"]
+		},
+		{
+			"name": "Spyfall",
+			"description": "There is a spy among you, and you have met to uncover them. You all share a piece of knowledge: the location of this strange meeting. All except the spy. Use this knowledge to weed the spy out, but don't let them discover your location or the consequences will be dire. ",
+			"url": "https://netgames.io/games/spyfall/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words"]
+		},
+		{
+			"name": "Love Letter",
+			"description": "Compete for the heart of the Princess through deception and betrayal. Your goal is to get your love letter into Princess Annette's hands while deflecting the letters from competing suitors.",
+			"url": "https://netgames.io/games/love-letter/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"duration": "10m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Avalon",
+			"description": "The Loyal Servants of Arthur are on a quest for the Holy Grail. However, the evil Minions of Mordred are amidst the good, and they wish to destroy their prize.",
+			"url": "https://netgames.io/games/avalon/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 5,
+			"maxPlayers": 10,
+			"duration": "10m",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["coop"]
+		},
+		{
+			"name": "Enigma",
+			"description": "Two warring factions are trying to send secret messages to their comrades, but their communications are broadcast for the enemy to see. To keep their messages secret, each faction 'encrypts' their messages using 4 keywords, known only to their comrades.",
+			"url": "https://netgames.io/games/enigma/",
+			"image": "netgames.jpg",
+
+			"minPlayers": 4,
+			"maxPlayers": "unlimited",
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["coop"]
+		}
+	]
+}
