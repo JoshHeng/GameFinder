@@ -11,6 +11,7 @@ Contributions, including adding new games and refining descriptions, are welcome
 ## Development
 
 ```bash
+npm install
 npm run dev
 ```
 
@@ -19,10 +20,12 @@ npm run dev
 This project can be deployed on Vercel, or manually:
 
 ```bash
+npm install
 npm run start
 ```
 
 Building static HTML files:
 ```bash
+npm install
 npm run build
 ```
