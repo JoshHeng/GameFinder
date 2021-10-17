@@ -2,13 +2,16 @@ import Head from 'next/head'
 import { promises as fs } from 'fs'
 import sizeOf from 'image-size';
 import path from 'path'
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 
-import { Container, Heading, Text, Flex, Box, Icon, Center, Button } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon, Center, Button, useClipboard, Alert, AlertIcon } from '@chakra-ui/react';
 import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
 import Config from '../components/Config';
+
+const tags = ['drawing', 'words', 'coop', 'trivia', 'action', 'funny', 'personal', 'free'];
+
 
 /**
  * Durstenfeld shuffle
@@ -29,6 +32,45 @@ export default function Home({ packs }) {
 		packs: packs.map(pack => pack.id.toString()),
 	});
 	const [ shuffle, setShuffle ] = useState(0);
+	const [ clipboardValue, setClipboardValue ] = useState(null);
+	const { hasCopied, onCopy } = useClipboard(clipboardValue);
+
+	// Set config from URL
+	useEffect(() => {
+		if (!location.search) return;
+		const configParams = new URLSearchParams(location.search);
+		if (configParams.values().length === 0) return;
+
+		let changedConfig = {};
+
+		if (configParams.get('people')) {
+			const val = parseInt(configParams.get('people'));
+			if (!isNaN(val) && val >= 0 && val <= 20) changedConfig.people = val;
+		}
+		if (configParams.get('familyFriendly')) {
+			const val = parseInt(configParams.get('familyFriendly'));
+			if (!isNaN(val) && val >= 0 && val <= 2) changedConfig.familyFriendly = val.toString();
+		}
+		if (configParams.get('tags')) {
+			const val = configParams.get('tags').split(',');
+			
+			changedConfig.tags = [];
+			val.forEach(tag => tags.includes(tag) && changedConfig.tags.push(tag));
+		}
+		if (configParams.get('packs')) {
+			const val = parseInt(configParams.get('packs'));
+			if (!isNaN(val) && val >= 0) {
+				changedConfig.packs = [];
+				const packsBits = val.toString(2);
+				packs.forEach((pack, i) => packsBits[i] === "1" && changedConfig.packs.push(pack.id.toString()));
+			}
+		}
+
+		setConfig(_config => ({
+			..._config,
+			...changedConfig
+		}));
+	}, [packs]);
 
 	const games = useMemo(() => {
 		if (!packs) return [];
@@ -62,6 +104,23 @@ export default function Home({ packs }) {
 		return _games;
 	}, [config, games]);
 
+	function copyConfigUrlToClipboard() {
+		// Construct packs integer
+		let packsBits = '';
+		packs.forEach(pack => packsBits += (config.packs.includes(pack.id.toString()) ? '1' : '0'));
+		const params = new URLSearchParams({
+			packs: parseInt(packsBits, 2)
+		});
+
+		// Add additional options
+		if (config.people !== 0) params.set('people', config.people);
+		if (config.familyFriendly !== "0") params.set('familyFriendly', config.familyFriendly); 
+		if (config.tags) params.set('tags', config.tags);
+		
+		setClipboardValue(`https://games.joshheng.co.uk?${params.toString()}`);
+		onCopy();
+	}
+
   	return (
 		<Container maxW="container.xl">
 			<Head>
@@ -85,11 +144,20 @@ export default function Home({ packs }) {
 
 			<Config config={config} setConfig={setConfig} packs={packs} />
 
+			{ hasCopied && (
+				<Alert status="success" mb="3">
+					<AlertIcon />
+					Share URL copied successfully!
+					<br />{clipboardValue}
+				</Alert>
+			)}
+
 			{ filteredGames.length > 0 ? (
 				<Box textAlign="center">
 					<Flex justify="center" alignContent="center" mb="2">
 						<Text ml="1" mr="1" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
 						<Button ml="1" mr="1" variant="outline" size="xs" onClick={() => setShuffle(prev => prev + 1)}>Shuffle</Button>
+						<Button ml="1" mr="1" variant="outline" size="xs" onClick={copyConfigUrlToClipboard}>{ hasCopied ? 'Copied' : 'Share' }</Button>
 					</Flex>
 					<Flex justify="center" wrap="wrap">
 						{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
