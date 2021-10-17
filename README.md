@@ -8,6 +8,20 @@ Available at https://games.joshheng.co.uk
 
 Contributions, including adding new games and refining descriptions, are welcome! Feel free to submit a PR or create an [issue](https://github.com/JoshHeng/GameFinder/issues) for someone else to do it.
 
+## Adding Games
+### Gradient
+The gradient should use colours from [Chakra UI](https://chakra-ui.com/docs/theming/theme).
+
+### Tags
+The following tags can be used:
+- drawing
+- words
+- coop
+- trivia
+- action
+- funny
+- personal
+
 ## Development
 
 ```bash
