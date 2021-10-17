@@ -9,7 +9,6 @@ export default function Config({ packs, config, setConfig }) {
 		const categories = { misc: [] };
 
 		packs.forEach(pack => {
-			console.log(pack.name);
 			if (pack.category && !categories[pack.category]) categories[pack.category] = [];
 			categories[pack.category || 'misc'].push(pack);
 		})
