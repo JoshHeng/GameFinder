@@ -61,8 +61,8 @@ export default function Home({ packs }) {
 			const val = parseInt(configParams.get('packs'));
 			if (!isNaN(val) && val >= 0) {
 				changedConfig.packs = [];
-				const packsBits = val.toString(2);
-				packs.forEach((pack, i) => packsBits[i] === "1" && changedConfig.packs.push(pack.id.toString()));
+				const packsBits = val.toString(2).padStart(packs.length, 0);
+				packs.slice().reverse().forEach((pack, i) => packsBits[i] === "1" && changedConfig.packs.push(pack.id.toString()));
 			}
 		}
 
@@ -107,7 +107,7 @@ export default function Home({ packs }) {
 	function copyConfigUrlToClipboard() {
 		// Construct packs integer
 		let packsBits = '';
-		packs.forEach(pack => packsBits += (config.packs.includes(pack.id.toString()) ? '1' : '0'));
+		packs.slice().reverse().forEach(pack => packsBits += (config.packs.includes(pack.id.toString()) ? '1' : '0'));
 		const params = new URLSearchParams({
 			packs: parseInt(packsBits, 2)
 		});
@@ -115,7 +115,7 @@ export default function Home({ packs }) {
 		// Add additional options
 		if (config.people !== 0) params.set('people', config.people);
 		if (config.familyFriendly !== "0") params.set('familyFriendly', config.familyFriendly); 
-		if (config.tags) params.set('tags', config.tags);
+		if (config.tags?.length > 0) params.set('tags', config.tags);
 		
 		setClipboardValue(`https://games.joshheng.co.uk?${params.toString()}`);
 		onCopy();
