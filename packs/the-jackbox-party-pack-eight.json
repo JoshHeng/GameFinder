@@ -1,0 +1,85 @@
+{
+	"name": "The Jackbox Party Pack 8",
+	"slug": "the-jackbox-party-pack-eight",
+	"url": "https://www.jackboxgames.com/product/the-jackbox-party-pack-8/",
+	"paid": true,
+	"gradient": "linear(to-tr, teal.300, teal.500)",
+
+	"games": [
+		{
+			"name": "Drawful Animate",
+			"description": "It’s alive! The guessing game with terrible drawings and hilariously wrong answers makes a dynamic return. In this revamped title, players create looping, two-frame animations based on weird and random titles.",
+			"url": "https://www.jackboxgames.com/drawful-animate/",
+			"image": "drawful-animate.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": 10,
+			"duration": "15-30m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["drawing", "funny"]
+		},
+		{
+			"name": "Job Job",
+			"description": "Use other people’s words to create unique and funny answers to classic job interview questions. Go head to head to see who scores the job!",
+			"url": "https://www.jackboxgames.com/job-job/",
+			"image": "job-job.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": 10,
+			"duration": "15-25m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["words", "funny"]
+		},
+		{
+			"name": "The Poll Mine",
+			"description": "A survey game that’s all about YOU! Split into teams and see who can escape from the witch’s lair! Players individually rank their choices to a difficult question, then must guess how the group answered as a whole.",
+			"url": "https://www.jackboxgames.com/the-poll-mine/",
+			"image": "the-poll-mine.jpg",
+
+			"minPlayers": 2,
+			"maxPlayers": 10,
+			"duration": "~15m",
+			"familyFriendly": "optional",
+			"manualCensoring": false,
+			"audience": 10000,
+
+			"tags": ["personal", "trivia"]
+		},
+		{
+			"name": "Weapons Drawn",
+			"description": "A social deduction game where everyone is both a murderer and a detective. Players doodle all the clues, hiding a letter from their name in the weapon drawings. Can you solve murders while trying to get away with your own?",
+			"url": "https://www.jackboxgames.com/weapons-drawn/",
+			"image": "weapons-drawn.jpg",
+
+			"minPlayers": 4,
+			"maxPlayers": 8,
+			"duration": "20-40m",
+			"familyFriendly": false,
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["drawing", "action"]
+		},
+		{
+			"name": "The Wheel of Enormous Proportions",
+			"description": "Trivia has never been so large! A fantastic, mystical wheel challenges you with a variety of trivia prompts. Winners are awarded slices of the Wheel’s face with a chance to win big with each nail-biting spin. In the end, one player will have their most burning question answered by the great Wheel.",
+			"url": "https://www.jackboxgames.com/the-wheel-of-enormous-proportions/",
+			"image": "the-wheel-of-enormous-proportions.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15-25m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["trivia"]
+		}
+	]
+}
