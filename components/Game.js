@@ -3,8 +3,9 @@ import { Heading, Text, Box, List, ListItem, ListIcon, Icon } from '@chakra-ui/r
 import { FiUsers, FiClock, FiSmile } from 'react-icons/fi'
 import { BiInfinite } from 'react-icons/bi';
 import GameTags from './GameTags';
+import { memo } from 'react';
 
-export default function Game({ game }) {
+export default memo(function Game({ game }) {
 	return (
 		<Box borderWidth="1px" borderRadius="lg" boxShadow="lg" w="64" maxW="md" m="1" overflow="hidden" bgGradient={game.gradient || game.pack.gradient || 'linear(to-tr, green.300, blue.500, purple.600)'} flexGrow="1" flexShrink="1" flexBasis="auto" flexDir="column" style={{ display: 'flex' }} as={ game.url ? "a" : "div" } href={game.url} rel="noopener noreferrer" target="_blank">
 			<Image src={game.image.src} width={game.image.width} height={game.image.height} alt="Cover image of game" />
@@ -47,4 +48,5 @@ export default function Game({ game }) {
 			<GameTags tags={game.tags} />
 		</Box>
 	);
-}
+	//Do not rerender if props changed - no need
+}, () => true);
