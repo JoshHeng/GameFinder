@@ -1,9 +1,12 @@
 {
+	"id": 5,
 	"name": "The Jackbox Party Pack 3",
+	"shortName": "Party Pack 3",
 	"slug": "the-jackbox-party-pack-three",
 	"url": "https://www.jackboxgames.com/party-pack-three/",
 	"paid": true,
 	"gradient": "linear(to-tr, orange.300, orange.500)",
+	"category": "Jackbox",
 
 	"games": [
 		{
