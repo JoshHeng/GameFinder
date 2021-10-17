@@ -1,9 +1,12 @@
 {
+	"id": 9,
 	"name": "The Jackbox Party Pack 7",
+	"shortName": "Party Pack 7",
 	"slug": "the-jackbox-party-pack-seven",
 	"url": "https://www.jackboxgames.com/party-pack-seven/",
 	"paid": true,
 	"gradient": "linear(to-tr, pink.300, pink.500)",
+	"category": "Jackbox",
 
 	"games": [
 		{

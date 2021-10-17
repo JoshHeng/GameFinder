@@ -1,15 +1,47 @@
-import { Heading, Box, Slider, SliderTrack, SliderFilledTrack, SliderThumb, FormControl, FormLabel, RadioGroup, Radio, Stack, Icon, Checkbox, CheckboxGroup } from '@chakra-ui/react';
-import { FiUsers, FiSmile, FiBookmark } from 'react-icons/fi';
+import { useMemo } from 'react';
+import { Heading, Box, Slider, SliderTrack, SliderFilledTrack, SliderThumb, FormControl, FormLabel, RadioGroup, Radio, Stack, Icon, Checkbox, CheckboxGroup, Tag, TagLeftIcon, TagLabel } from '@chakra-ui/react';
+import { FiUsers, FiSmile, FiBookmark, FiBox, FiGrid } from 'react-icons/fi';
 import { BiInfinite } from 'react-icons/bi';
 import { GameTag } from './GameTags';
 
-export default function Config({ config, setConfig }) {
+export default function Config({ packs, config, setConfig }) {
+	const packCategories = useMemo(() => {
+		const categories = { misc: [] };
+
+		packs.forEach(pack => {
+			console.log(pack.name);
+			if (pack.category && !categories[pack.category]) categories[pack.category] = [];
+			categories[pack.category || 'misc'].push(pack);
+		})
+
+		return Object.keys(categories).map(categoryKey => ({ name: categoryKey, packs: categories[categoryKey] }));
+	}, [packs]);
+
+	const packCategoryParentCheckboxes = useMemo(() => {
+		return packCategories.map(category => {
+			let chosenCount = category.packs.filter(pack => config.packs.includes(pack.id.toString())).length;
+			if (chosenCount === category.packs.length) return 1;
+			else if (chosenCount) return 2;
+			else return 0;
+		})
+	}, [packCategories, config]);
+
 	function setSetting(name, val) {
 		return setConfig(config => {
 			const _config =  Object.assign({}, config);
 			_config[name] = val
 			return _config;
 		});
+	}
+
+	function onPackCategoryParentCheckboxChange(categoryId, enabled) {
+		const category = packCategories[categoryId];
+		let currentValue = config.packs || [];
+
+		currentValue = currentValue.filter(packId => !category.packs.find(pack => pack.id.toString() === packId));
+		if (enabled) currentValue = currentValue.concat(category.packs.map(pack => pack.id.toString()));
+
+		return setSetting('packs', currentValue);
 	}
 
 	return (
@@ -53,6 +85,31 @@ export default function Config({ config, setConfig }) {
 							<Checkbox value="funny"><GameTag type="funny" /></Checkbox>
 							<Checkbox value="personal"><GameTag type="personal" /></Checkbox>
 							<Checkbox value="free"><GameTag type="free" /></Checkbox>
+						</Stack>
+					</CheckboxGroup>
+				</FormControl>
+
+				<FormControl id="packs" mt="3">
+					<FormLabel fontWeight="bold"><Icon as={FiBox} mr="1" />Packs</FormLabel>
+					<CheckboxGroup value={config.packs} onChange={val => setSetting('packs', val)}>
+						<Stack spacing="2" direction="column">
+							{ packCategories.map((category, i) => (
+								<Stack spacing="5" direction="row" wrap="wrap" key={category.name}>
+									{ category.name !== "misc" && 
+										<Checkbox isChecked={packCategoryParentCheckboxes[i] === 1} isIndeterminate={packCategoryParentCheckboxes[i] === 2} onChange={e => onPackCategoryParentCheckboxChange(i, e.target.checked)}>
+											<Tag mt="0.5" mb="0.5" colorScheme="blue">
+												<TagLeftIcon boxSize="12px" as={FiGrid} />
+												<TagLabel>{category.name}</TagLabel>
+											</Tag>
+										</Checkbox>
+									}
+									{ category.packs.map(pack => (
+										<Checkbox value={pack.id.toString()} key={pack.id}>
+											<Tag mt="0.5" mb="0.5" size="sm">{pack.shortName || pack.name || 'Misc'}</Tag>
+										</Checkbox>
+									))}
+								</Stack>
+							))}
 						</Stack>
 					</CheckboxGroup>
 				</FormControl>

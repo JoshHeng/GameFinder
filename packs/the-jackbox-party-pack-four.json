@@ -1,9 +1,12 @@
 {
+	"id": 6,
 	"name": "The Jackbox Party Pack 4",
+	"shortName": "Party Pack 4",
 	"slug": "the-jackbox-party-pack-four",
 	"url": "https://www.jackboxgames.com/party-pack-four/",
 	"paid": true,
 	"gradient": "linear(to-tr, green.300, green.500)",
+	"category": "Jackbox",
 
 	"games": [
 		{

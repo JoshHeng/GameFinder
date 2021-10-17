@@ -25,7 +25,8 @@ function shuffleArray(array) {
 export default function Home({ packs }) {
 	const [ config, setConfig ] = useState({
 		people: 0,
-		familyFriendly: "0"
+		familyFriendly: "0",
+		packs: packs.map(pack => pack.id.toString()),
 	});
 	const [ shuffle, setShuffle ] = useState(0);
 
@@ -46,6 +47,7 @@ export default function Home({ packs }) {
 	const filteredGames = useMemo(() => {
 		let _games = games.slice();
 
+		if (config.packs) _games = _games.filter(game => config.packs.includes(game.pack.id));
 		if (config.people) _games = _games.filter(game => game.minPlayers <= config.people && (game.maxPlayers === 'unlimited' || game.maxPlayers >= config.people));
 		if (config.familyFriendly) {
 			if (config.familyFriendly === "2") _games = _games.filter(game => game.familyFriendly === true);
@@ -81,7 +83,7 @@ export default function Home({ packs }) {
 				<Text color="blue.600">Find the best online multiplayer games</Text>
 			</Box>
 
-			<Config config={config} setConfig={setConfig} />
+			<Config config={config} setConfig={setConfig} packs={packs} />
 
 			{ filteredGames.length > 0 ? (
 				<Box textAlign="center">
@@ -128,7 +130,7 @@ async function getPacks() {
 function processPacks(packs) {
 	const imagesDirectory = path.join(process.cwd(), 'public', 'images');
 
-	packs= packs.map(pack => ({
+	packs = packs.sort((a, b) => a.id - b.id).map(pack => ({
 		...pack,
 		games: pack.games.map(game => {
 			if (game.image) {
@@ -159,7 +161,8 @@ function processPacks(packs) {
 				pack: {
 					name: pack.name,
 					gradient: pack.gradient || null,
-					url: pack.url || null
+					url: pack.url || null,
+					id: pack.id.toString(),
 				}
 			}
 		})

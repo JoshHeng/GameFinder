@@ -1,9 +1,12 @@
 {
+	"id": 10,
 	"name": "The Jackbox Party Pack 8",
+	"shortName": "Party Pack 8",
 	"slug": "the-jackbox-party-pack-eight",
 	"url": "https://www.jackboxgames.com/product/the-jackbox-party-pack-8/",
 	"paid": true,
 	"gradient": "linear(to-tr, teal.300, teal.500)",
+	"category": "Jackbox",
 
 	"games": [
 		{
