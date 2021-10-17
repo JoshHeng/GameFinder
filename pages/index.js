@@ -4,17 +4,30 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo, useState } from 'react';
 
-import { Container, Heading, Text, Flex, Box, Icon, Center } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon, Center, Button } from '@chakra-ui/react';
 import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
 import Config from '../components/Config';
+
+/**
+ * Durstenfeld shuffle
+ * See SO https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+ * @param {*} array 
+ */
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 export default function Home({ packs }) {
 	const [ config, setConfig ] = useState({
 		people: 0,
 		familyFriendly: "0"
 	});
+	const [ shuffle, setShuffle ] = useState(0);
 
 	const games = useMemo(() => {
 		if (!packs) return [];
@@ -25,8 +38,10 @@ export default function Home({ packs }) {
 			_games = _games.concat(pack.games);
 		});
 
+		if (shuffle) shuffleArray(_games);
+
 		return _games;
-	}, [packs]);
+	}, [packs, shuffle]);
 
 	const filteredGames = useMemo(() => {
 		let _games = games.slice();
@@ -70,7 +85,10 @@ export default function Home({ packs }) {
 
 			{ filteredGames.length > 0 ? (
 				<Box textAlign="center">
-					<Text mb="2" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
+					<Flex justify="center" alignContent="center" mb="2">
+						<Text ml="1" mr="1" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
+						<Button ml="1" mr="1" variant="outline" size="xs" onClick={() => setShuffle(prev => prev + 1)}>Shuffle</Button>
+					</Flex>
 					<Flex justify="center" wrap="wrap">
 						{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
 					</Flex>
