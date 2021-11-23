@@ -36,6 +36,22 @@
 		},
 
 		{
+			"name": "Codewords",
+			"description": "The objective of the game is for the spymasters to send clues to their field operatives (the other players on their team) to help them decode all of their team's words without uncovering the bomb. The team that decodes all of their words first wins; if a team uncovers the bomb, the other team wins.",
+			"url": "http://codewordsgame.com/",
+			"image": "codewords.jpg",
+			"gradient": "linear(to-tr, purple.400, blue.500)",
+
+			"minPlayers": 4,
+			"maxPlayers": 100,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": true,
+
+			"tags": ["words"]
+		},
+
+		{
 			"name": "Pretend You're Xyzzy",
 			"description": "Cards Against Humanity is a fill-in-the-blank party game that turns your awkward personality and lackluster social skills into hours of fun!",
 			"url": "https://pyx-1.pretendyoure.xyz/",
