@@ -1,0 +1,41 @@
+{
+	"id": 11,
+	"name": "JKLM.FUN",
+	"slug": "jklm-fun",
+	"url": "https://jklm.fun/",
+	"paid": false,
+	"gradient": "linear(to-tr, #7f54de, #8063bf)",
+
+	"games": [
+		{
+			"name": "BombParty",
+			"description": "The exploside word game - type a word that contains the prompt. Be quick! If the bomb explodes during your turn, you lose a life.",
+			"url": "https://jklm.fun/",
+			"image": "bomb-party.jpg",
+
+			"minPlayers": 2,
+			"maxPlayers": 16,
+			"duration": "Variable",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words"]
+		},
+		{
+			"name": "PopSauce",
+			"description": "Guess where each quote or picture came from. The earlier you find the answer, the more points you score!",
+			"url": "https://jklm.fun/",
+			"image": "pop-sauce.jpg",
+
+			"minPlayers": 2,
+			"maxPlayers": 100,
+			"duration": "Variable",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["trivia"]
+		}
+	]
+}
