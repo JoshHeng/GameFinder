@@ -81,7 +81,16 @@ export default function Home({ packs }) {
 			_games = _games.concat(pack.games);
 		});
 
-		if (shuffle) shuffleArray(_games);
+		if (shuffle === 0) {
+			// Start
+			shuffleArray(_games);
+
+			_games = _games.sort((a, b) => b.rank - a.rank);
+		}
+		else {
+			// Shuffle button clicked
+			shuffleArray(_games);
+		}
 
 		return _games;
 	}, [packs, shuffle]);
@@ -226,6 +235,7 @@ function processPacks(packs) {
 			return {
 				...game,
 				tags,
+				rank: game.rank || pack.rank || 0,
 				pack: {
 					name: pack.name,
 					gradient: pack.gradient || null,

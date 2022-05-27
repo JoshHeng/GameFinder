@@ -12,6 +12,7 @@
 			"description": "The exploside word game - type a word that contains the prompt. Be quick! If the bomb explodes during your turn, you lose a life.",
 			"url": "https://jklm.fun/",
 			"image": "bomb-party.jpg",
+			"rank": 100,
 
 			"minPlayers": 2,
 			"maxPlayers": 16,
@@ -27,6 +28,7 @@
 			"description": "Guess where each quote or picture came from. The earlier you find the answer, the more points you score!",
 			"url": "https://jklm.fun/",
 			"image": "pop-sauce.jpg",
+			"rank": 90,
 
 			"minPlayers": 2,
 			"maxPlayers": 100,

@@ -2,6 +2,7 @@
 	"id": 1,
 	"name": "",
 	"slug": "misc",
+	"rank": 50,
 
 	"games": [
 		{
@@ -10,6 +11,7 @@
 			"url": "https://garticphone.com",
 			"image": "gartic-phone.png",
 			"gradient": "linear(to-tr, purple.400, pink.400)",
+			"rank": 100,
 
 			"minPlayers": 1,
 			"maxPlayers": 30,
@@ -25,6 +27,7 @@
 			"url": "https://skribbl.io/",
 			"image": "skribblio.png",
 			"gradient": "linear(to-tr, cyan.400, blue.500)",
+			"rank": 100,
 
 			"minPlayers": 2,
 			"maxPlayers": 12,
@@ -138,6 +141,7 @@
 			"familyFriendly": true,
 			"manualCensoring": false,
 			"audience": true,
+			"rank": 100,
 
 			"tags": ["action"]
 		},
