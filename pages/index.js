@@ -4,7 +4,7 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo, useState, useEffect } from 'react';
 
-import { Container, Heading, Text, Flex, Box, Icon, Center, Button, useClipboard, Alert, AlertIcon } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon, Center, Button, Alert, AlertIcon, useToast } from '@chakra-ui/react';
 import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
@@ -32,8 +32,7 @@ export default function Home({ packs }) {
 		packs: packs.map(pack => pack.id.toString()),
 	});
 	const [ shuffle, setShuffle ] = useState(0);
-	const [ clipboardValue, setClipboardValue ] = useState(null);
-	const { hasCopied, onCopy } = useClipboard(clipboardValue);
+	const toast = useToast();
 
 	// Set config from URL
 	useEffect(() => {
@@ -113,7 +112,7 @@ export default function Home({ packs }) {
 		return _games;
 	}, [config, games]);
 
-	function copyConfigUrlToClipboard() {
+	async function copyConfigUrlToClipboard() {
 		const params = new URLSearchParams();
 
 		// Construct packs integer
@@ -127,8 +126,46 @@ export default function Home({ packs }) {
 		if (config.tags?.length > 0) params.set('tags', config.tags);
 		
 		const paramsQuery = params.toString();
-		setClipboardValue(`https://games.joshheng.co.uk${paramsQuery ? '?' + paramsQuery : ''}`);
-		onCopy();
+		const url = `https://games.joshheng.co.uk${paramsQuery ? '?' + paramsQuery : ''}`
+
+		if (navigator && navigator.canShare && navigator.canShare({ url })) {
+			try {
+				await navigator.share({ url });
+				return toast({
+					title: 'Games Shared',
+					description: <p>URL: <a href={url}>{url}</a></p>,
+					status: 'success',
+					variant: 'subtle',
+					duration: 5000,
+					isClosable: true
+				});
+			}
+			catch (error) {
+				return;
+			}
+		}
+		
+		try {
+			await navigator.clipboard.writeText(url);
+			return toast({
+				title: 'Link Copied to Clipboard',
+				description: <p>URL: <a href={url}>{url}</a></p>,
+				status: 'success',
+				variant: 'subtle',
+				duration: 5000,
+				isClosable: true
+			});
+		}
+		catch (error) {
+			return toast({
+				title: 'Unable to Copy Link to Clipboard',
+				description: <p>URL: <a href={url}>{url}</a></p>,
+				status: 'error',
+				variant: 'subtle',
+				duration: 10000,
+				isClosable: true
+			});
+		}
 	}
 
   	return (
@@ -154,20 +191,12 @@ export default function Home({ packs }) {
 
 			<Config config={config} setConfig={setConfig} packs={packs} />
 
-			{ hasCopied && (
-				<Alert status="success" mb="3">
-					<AlertIcon />
-					Share URL copied successfully!
-					<br />{clipboardValue}
-				</Alert>
-			)}
-
 			{ filteredGames.length > 0 ? (
 				<Box textAlign="center">
 					<Flex justify="center" alignContent="center" mb="2">
 						<Text ml="1" mr="1" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
 						<Button ml="1" mr="1" variant="outline" size="xs" onClick={() => setShuffle(prev => prev + 1)}>Shuffle</Button>
-						<Button ml="1" mr="1" variant="outline" size="xs" onClick={copyConfigUrlToClipboard}>{ hasCopied ? 'Copied' : 'Share' }</Button>
+						<Button ml="1" mr="1" variant="outline" size="xs" onClick={copyConfigUrlToClipboard}>Share</Button>
 					</Flex>
 					<Flex justify="center" wrap="wrap">
 						{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
