@@ -114,19 +114,20 @@ export default function Home({ packs }) {
 	}, [config, games]);
 
 	function copyConfigUrlToClipboard() {
+		const params = new URLSearchParams();
+
 		// Construct packs integer
 		let packsBits = '';
 		packs.slice().reverse().forEach(pack => packsBits += (config.packs.includes(pack.id.toString()) ? '1' : '0'));
-		const params = new URLSearchParams({
-			packs: parseInt(packsBits, 2)
-		});
+		if (packsBits.includes("0")) params.set('packs', parseInt(packsBits, 2));
 
 		// Add additional options
 		if (config.people !== 0) params.set('people', config.people);
 		if (config.familyFriendly !== "0") params.set('familyFriendly', config.familyFriendly); 
 		if (config.tags?.length > 0) params.set('tags', config.tags);
 		
-		setClipboardValue(`https://games.joshheng.co.uk?${params.toString()}`);
+		const paramsQuery = params.toString();
+		setClipboardValue(`https://games.joshheng.co.uk${paramsQuery ? '?' + paramsQuery : ''}`);
 		onCopy();
 	}
 
