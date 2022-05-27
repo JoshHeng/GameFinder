@@ -4,7 +4,7 @@ import sizeOf from 'image-size';
 import path from 'path'
 import { useMemo, useState, useEffect } from 'react';
 
-import { Container, Heading, Text, Flex, Box, Icon, Center, Button, useClipboard, Alert, AlertIcon } from '@chakra-ui/react';
+import { Container, Heading, Text, Flex, Box, Icon, Center, Button, Alert, AlertIcon, useToast } from '@chakra-ui/react';
 import { FiFrown } from 'react-icons/fi';
 
 import Game from '../components/Game';
@@ -32,8 +32,7 @@ export default function Home({ packs }) {
 		packs: packs.map(pack => pack.id.toString()),
 	});
 	const [ shuffle, setShuffle ] = useState(0);
-	const [ clipboardValue, setClipboardValue ] = useState(null);
-	const { hasCopied, onCopy } = useClipboard(clipboardValue);
+	const toast = useToast();
 
 	// Set config from URL
 	useEffect(() => {
@@ -81,7 +80,16 @@ export default function Home({ packs }) {
 			_games = _games.concat(pack.games);
 		});
 
-		if (shuffle) shuffleArray(_games);
+		if (shuffle === 0) {
+			// Start
+			shuffleArray(_games);
+
+			_games = _games.sort((a, b) => b.rank - a.rank);
+		}
+		else {
+			// Shuffle button clicked
+			shuffleArray(_games);
+		}
 
 		return _games;
 	}, [packs, shuffle]);
@@ -104,21 +112,60 @@ export default function Home({ packs }) {
 		return _games;
 	}, [config, games]);
 
-	function copyConfigUrlToClipboard() {
+	async function copyConfigUrlToClipboard() {
+		const params = new URLSearchParams();
+
 		// Construct packs integer
 		let packsBits = '';
 		packs.slice().reverse().forEach(pack => packsBits += (config.packs.includes(pack.id.toString()) ? '1' : '0'));
-		const params = new URLSearchParams({
-			packs: parseInt(packsBits, 2)
-		});
+		if (packsBits.includes("0")) params.set('packs', parseInt(packsBits, 2));
 
 		// Add additional options
 		if (config.people !== 0) params.set('people', config.people);
 		if (config.familyFriendly !== "0") params.set('familyFriendly', config.familyFriendly); 
 		if (config.tags?.length > 0) params.set('tags', config.tags);
 		
-		setClipboardValue(`https://games.joshheng.co.uk?${params.toString()}`);
-		onCopy();
+		const paramsQuery = params.toString();
+		const url = `https://games.joshheng.co.uk${paramsQuery ? '?' + paramsQuery : ''}`
+
+		if (navigator && navigator.canShare && navigator.canShare({ url })) {
+			try {
+				await navigator.share({ url });
+				return toast({
+					title: 'Games Shared',
+					description: <p>URL: <a href={url}>{url}</a></p>,
+					status: 'success',
+					variant: 'subtle',
+					duration: 5000,
+					isClosable: true
+				});
+			}
+			catch (error) {
+				return;
+			}
+		}
+		
+		try {
+			await navigator.clipboard.writeText(url);
+			return toast({
+				title: 'Link Copied to Clipboard',
+				description: <p>URL: <a href={url}>{url}</a></p>,
+				status: 'success',
+				variant: 'subtle',
+				duration: 5000,
+				isClosable: true
+			});
+		}
+		catch (error) {
+			return toast({
+				title: 'Unable to Copy Link to Clipboard',
+				description: <p>URL: <a href={url}>{url}</a></p>,
+				status: 'error',
+				variant: 'subtle',
+				duration: 10000,
+				isClosable: true
+			});
+		}
 	}
 
   	return (
@@ -144,20 +191,12 @@ export default function Home({ packs }) {
 
 			<Config config={config} setConfig={setConfig} packs={packs} />
 
-			{ hasCopied && (
-				<Alert status="success" mb="3">
-					<AlertIcon />
-					Share URL copied successfully!
-					<br />{clipboardValue}
-				</Alert>
-			)}
-
 			{ filteredGames.length > 0 ? (
 				<Box textAlign="center">
 					<Flex justify="center" alignContent="center" mb="2">
 						<Text ml="1" mr="1" color="gray.600"><Text as="span" fontWeight="bold">{ filteredGames.length }</Text> Games Found</Text>
 						<Button ml="1" mr="1" variant="outline" size="xs" onClick={() => setShuffle(prev => prev + 1)}>Shuffle</Button>
-						<Button ml="1" mr="1" variant="outline" size="xs" onClick={copyConfigUrlToClipboard}>{ hasCopied ? 'Copied' : 'Share' }</Button>
+						<Button ml="1" mr="1" variant="outline" size="xs" onClick={copyConfigUrlToClipboard}>Share</Button>
 					</Flex>
 					<Flex justify="center" wrap="wrap">
 						{ filteredGames.map(game => <Game game={game} key={`${game.pack.name}${game.name}`} />) }
@@ -226,6 +265,7 @@ function processPacks(packs) {
 			return {
 				...game,
 				tags,
+				rank: game.rank || pack.rank || 0,
 				pack: {
 					name: pack.name,
 					gradient: pack.gradient || null,

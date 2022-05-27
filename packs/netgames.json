@@ -4,6 +4,7 @@
 	"slug": "netgames",
 	"url": "https://netgames.io/games/",
 	"gradient": "linear(to-tr, cyan.500, cyan.700)",
+	"rank": 30,
 
 	"games": [
 		{
