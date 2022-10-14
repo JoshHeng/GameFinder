@@ -161,7 +161,6 @@
 
 			"tags": ["words"]
 		},
-
 		{
 			"name": "Codenames",
 			"description": "Two teams compete to see who can make contact with all of their agents first, through hinting their codenames.",
@@ -176,6 +175,81 @@
 			"audience": false,
 
 			"tags": ["words", "coop"]
+		},
+		{
+			"name": "vote's out!",
+			"description": "Similar to Quiplash, answer the prompt with your funniest answers to win votes from other players.",
+			"url": "https://votesout.com/",
+			"image": "votes-out.png",
+			"gradient": "linear(to-br, purple.300, purple.500)",
+
+			"minPlayers": 3,
+			"maxPlayers": 12,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words", "funny"]
+		},
+		{
+			"name": "Longwave",
+			"description": "A web adaptation of the social guessing game Wavelength - the Psychic provides a clue that indicates a location on a spectrum of two opposing binaries. Their team then rotates a dial across the spectrum based on that clue, finishing as close to the target as possible!",
+			"url": "https://longwave.web.app",
+			"image": "longwave.png",
+			"gradient": "linear(to-br, blue.400, cyan.500)",
+
+			"minPlayers": 2,
+			"maxPlayers": "unlimited",
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words", "coop"]
+		},
+		{
+			"name": "Coup Online",
+			"description": "An online version of the game Coup - each turn, play an action based on the cards you have, bluffing to your friends to be the last one standing!",
+			"url": "https://www.chickenkoup.com/",
+			"image": "coup.png",
+			"gradient": "linear(to-br, orange.400, orange.300)",
+
+			"minPlayers": 2,
+			"maxPlayers": 6,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["action"]
+		},
+		{
+			"name": "Spyfall",
+			"description": "Try and find the enemy spy among your group! Each round, all players except the spy will be given a location. The spy must figure out the location to fit in and not get caught!",
+			"url": "https://www.spyfall.app",
+			"image": "spyfall.png",
+			"gradient": "linear(to-br, teal.300, blue.300)",
+
+			"minPlayers": 4,
+			"maxPlayers": 12,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["coop"]
+		},
+		{
+			"name": "Squabble",
+			"description": "A competitive version of Wordle - keep guessing words until you're the last one standing!",
+			"url": "https://squabble.me/",
+			"image": "squabble.png",
+			"gradient": "linear(to-br, purple.600, purple.400)",
+
+			"minPlayers": 2,
+			"maxPlayers": 99,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words"]
 		}
 	]
 }
