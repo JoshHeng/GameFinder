@@ -1,0 +1,88 @@
+{
+	"id": 12,
+	"name": "The Jackbox Party Pack 9",
+	"shortName": "Party Pack 9",
+	"slug": "the-jackbox-party-pack-nine",
+	"url": "https://www.jackboxgames.com/party-pack-nine/",
+	"paid": true,
+	"gradient": "linear(to-bl, orange.400, orange.300)",
+	"category": "Jackbox",
+
+	"games": [
+		{
+			"name": "Fibbage 4",
+			"description": "The hilarious bluffing party game returns with an all new Final Fibbage, video questions, fan-submitted questions, and Fibbage Enough About You mode! It’s a game so beloved that we decided to slap a 4 on it.",
+			"url": "https://www.jackboxgames.com/fibbage-four/",
+			"image": "fibbage4.jpg",
+
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"duration": "20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["words", "trivia", "funny"]
+		},
+		{
+			"name": "Quixort",
+			"description": "In this trivia sorting factory, work with your team to sort falling answers into their proper order before they hit the floor! Or, play the single player mode and see how many blocks you can sort before topping out. It’s as easy as A, C, B!",
+			"url": "https://www.jackboxgames.com/quixort/",
+			"image": "quixort.jpg",
+
+			"minPlayers": 1,
+			"maxPlayers": 10,
+			"duration": "15-20m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["trivia", "coop"]
+		},
+		{
+			"name": "Junktopia",
+			"description": "A strange wizard has turned you into a frog! Create hilarious backstories for weird objects and then get them appraised. The player with the most valuable items becomes human again!",
+			"url": "https://www.jackboxgames.com/junktopia/",
+			"image": "junktopia.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15-25m",
+			"familyFriendly": "optional",
+			"manualCensoring": false,
+			"audience": 10000,
+
+			"tags": ["words"]
+		},
+		{
+			"name": "Nonsensory",
+			"description": "Professor Nanners is here to test your NSP (Nonsensory Perception) in this drawing, writing, and guessing game! How close can you get to guessing where another player’s prompt ranks on the silliest of scales?",
+			"url": "https://www.jackboxgames.com/nonsensory/",
+			"image": "nonsensory.jpg",
+
+			"minPlayers": 3,
+			"maxPlayers": 8,
+			"duration": "15-25m",
+			"familyFriendly": false,
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["words", "drawing"]
+		},
+		{
+			"name": "Roomerang",
+			"description": "Channel your inner reality TV star in an attempt to come out on top! Respond to prompts, bring the competition and role-play to avoid being voted out. Never fear though, even when you’re out you’ll find yourself Roomerang-ed right back into the drama!",
+			"url": "https://www.jackboxgames.com/roomerang/",
+			"image": "roomerang.jpg",
+
+			"minPlayers": 4,
+			"maxPlayers": 9,
+			"duration": "15-35m",
+			"familyFriendly": "optional",
+			"manualCensoring": true,
+			"audience": 10000,
+
+			"tags": ["words"]
+		}
+	]
+}
