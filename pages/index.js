@@ -16,7 +16,7 @@ const tags = ['drawing', 'words', 'coop', 'trivia', 'action', 'funny', 'personal
 /**
  * Durstenfeld shuffle
  * See SO https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
- * @param {*} array 
+ * @param {*} array
  */
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -52,7 +52,7 @@ export default function Home({ packs }) {
 		}
 		if (configParams.get('tags')) {
 			const val = configParams.get('tags').split(',');
-			
+
 			changedConfig.tags = [];
 			val.forEach(tag => tags.includes(tag) && changedConfig.tags.push(tag));
 		}
@@ -122,9 +122,9 @@ export default function Home({ packs }) {
 
 		// Add additional options
 		if (config.people !== 0) params.set('people', config.people);
-		if (config.familyFriendly !== "0") params.set('familyFriendly', config.familyFriendly); 
+		if (config.familyFriendly !== "0") params.set('familyFriendly', config.familyFriendly);
 		if (config.tags?.length > 0) params.set('tags', config.tags);
-		
+
 		const paramsQuery = params.toString();
 		const url = `https://games.joshheng.co.uk${paramsQuery ? '?' + paramsQuery : ''}`
 
@@ -144,7 +144,7 @@ export default function Home({ packs }) {
 				return;
 			}
 		}
-		
+
 		try {
 			await navigator.clipboard.writeText(url);
 			return toast({

@@ -250,6 +250,21 @@
 			"audience": false,
 
 			"tags": ["words"]
-		}
+		},
+        {
+            "name": "draw battle!",
+            "description": "Two teams of drawers face off in a guess-the-drawing type game with a frantic final round!",
+            "url": "https://drawbattle.io/",
+            "image": "draw-battle.jpg",
+            "gradient": "linear(to-br, yellow.500, yellow.300)",
+
+            "minPlayers": 2,
+            "maxPlayers": "unlimited",
+            "familyFriendly": true,
+            "manualCensoring": false,
+            "audience": false,
+
+            "tags": ["coop", "drawing"]
+        }
 	]
 }
