@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Heading, Text, Box, List, ListItem, ListIcon, Icon } from '@chakra-ui/react';
+import {Heading, Text, Box, List, ListItem, ListIcon, Icon} from '@chakra-ui/react';
 import { FiUsers, FiClock, FiSmile } from 'react-icons/fi'
 import { BiInfinite } from 'react-icons/bi';
 import GameTags from './GameTags';
@@ -33,7 +33,7 @@ export default memo(function Game({ game }) {
 			<List m="2" p="3" spacing="1" mt="auto">
 				<ListItem>
 					<ListIcon as={FiUsers} />
-					<Text as="span" fontWeight="bold">Players: </Text>{game.minPlayers}-{game.maxPlayers === 'unlimited' ? <Icon as={BiInfinite} /> : game.maxPlayers}
+          <Text as="span" fontWeight="bold">Players: </Text><div style={{ display: 'inline-flex', alignItems: 'center' }}>{game.minPlayers}-{game.maxPlayers === 'unlimited' ? <Icon as={BiInfinite} mt="0.2rem" /> : game.maxPlayers}</div>
 				</ListItem>
 				<ListItem>
 					<ListIcon as={FiClock} />
