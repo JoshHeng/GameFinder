@@ -1,0 +1,193 @@
+{
+	"id": 13,
+	"name": "Bloob.io",
+	"slug": "bloobio",
+	"url": "https://bloob.io/",
+	"gradient": "linear(to-tr, #1abc9c, #16a085)",
+	"paid": false,
+	"rank": 30,
+	"games": [
+		{
+			"name": "Yacht",
+			"description": "Experience the classic dice game of Yahtzee/Yatzy in a fun and interactive browser format! Roll the dice and strategize to achieve the highest score by creating combinations like full houses, straights, and of course, the coveted Yacht!",
+			"url": "https://bloob.io/yacht",
+			"image": "yacht.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Battleship",
+			"description": "Engage in strategic naval warfare with the classic game of Battleships! Take turns guessing the locations of your opponent's ships on a grid, while trying to keep your own fleet hidden. Sink all enemy ships before they sink yours!",
+			"url": "https://bloob.io/battleship",
+			"image": "battleship.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 2,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["action"]
+		},
+		{
+			"name": "Checkers",
+			"description": "Challenge your strategic thinking with the timeless game of Checkers! Move your pieces diagonally across the board, capturing your opponent's pieces by jumping over them. Aim to outmaneuver your opponent and be the first to capture all their pieces or block their moves.",
+			"url": "https://bloob.io/checkers",
+			"image": "checkers.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 2,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Cribbage",
+			"description": "Dive into the classic card game of Cribbage, where strategy and skill come together! Players aim to create combinations of cards for points while navigating the unique scoring board. Use your hand wisely and outsmart your opponent to reach the target score first.",
+			"url": "https://bloob.io/cribbage",
+			"image": "cribbage.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "8 Ball Pool",
+			"description": "Step up to the virtual pool table and test your skills in 8 Ball Pool! Compete against friends or players from around the world as you aim to sink all your designated balls and then the 8 ball to win the game. Master your shots and strategize your moves to outplay your opponents.",
+			"url": "https://bloob.io/8ballpool",
+			"image": "8ballpool.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 2,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Four in a Row",
+			"description": "Challenge your friends in the classic game of Four in a Row! Players take turns dropping colored discs into a vertical grid, aiming to connect four of their discs in a row—horizontally, vertically, or diagonally. With the option to play with 2 to 6 players, the competition gets even more exciting!",
+			"url": "https://bloob.io/fourinarow",
+			"image": "fourinarow.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 6,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Gin Rummy",
+			"description": "Enjoy the classic card game of Gin Rummy, where skill and strategy are key! Players aim to form sets and runs of cards to score points while trying to outsmart their opponents. Knock or go gin to maximize your score and win the game!",
+			"url": "https://bloob.io/ginrummy",
+			"image": "ginrummy.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 2,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Rock Paper Scissors",
+			"description": "Experience the classic game of Rock Paper Scissors with a twist! Now you can play with 2 to 4 players, adding an exciting layer of competition. Each player simultaneously chooses rock, paper, or scissors, and the winner is determined by the classic rules: rock crushes scissors, scissors cuts paper, and paper covers rock.",
+			"url": "https://bloob.io/rps",
+			"image": "rps.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Rotten Apples",
+			"description": "Dive into the hilariously irreverent world of Cards Against Humanity in this web-based version! Players take turns filling in the blanks of prompts with outrageous and often inappropriate phrases, aiming to create the funniest combinations. The player with the best sense of humor wins the round!",
+			"url": "https://bloob.io/rottenapples",
+			"image": "rottenapples.webp",
+
+			"minPlayers": 3,
+			"maxPlayers": 16,
+			"familyFriendly": false,
+			"manualCensoring": true,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Super Tic-Tac-Toe",
+			"description": "Elevate your classic Tic-Tac-Toe experience with Super Tic-Tac-Toe! This enhanced version features a larger grid and multiple layers of strategy, allowing players to create winning lines in various directions. Compete against friends or family to see who can outsmart the other in this engaging twist on the traditional game.",
+			"url": "https://bloob.io/supertictactoe",
+			"image": "stt.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 2,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Trivia",
+			"description": "Put your knowledge to the test with Trivia, the ultimate quiz game that can be played solo, against others, in co-op mode, or in teams! Choose from a wide variety of question packs covering diverse topics, from history and science to pop culture and sports. Challenge yourself or compete with friends to see who can answer the most questions correctly!",
+			"url": "https://bloob.io/trivia",
+			"image": "trivia.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 12,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["trivia", "coop"]
+		},
+		{
+			"name": "War",
+			"description": "Engage in the classic card game of War, where luck and strategy collide! Players compete to win all the cards by flipping over their top card and comparing values. The player with the higher card takes both cards, and in the event of a tie, a \"war\" ensues. The game continues until one player has all the cards!",
+			"url": "https://bloob.io/war",
+			"image": "war.webp",
+
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": []
+		},
+		{
+			"name": "Wordrace",
+			"description": "Get ready for a fast-paced word-finding challenge in Wordrace! Compete against other players as you search for words within the same playing field. The goal is to find as many words as possible before time runs out, testing your vocabulary and quick thinking skills.",
+			"url": "https://bloob.io/wordrace",
+			"image": "wordrace.webp",
+
+			"minPlayers": 1,
+			"maxPlayers": 12,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+
+			"tags": ["words"]
+		}
+	]
+}
