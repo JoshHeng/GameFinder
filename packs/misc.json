@@ -265,6 +265,21 @@
             "audience": false,
 
             "tags": ["coop", "drawing"]
-        }
+        },
+		{
+			"name": "Curvytron 2",
+			"description": "A Tron-like arcade game... with curves! Steer your line, dodge everyone's trails, grab bonuses and be the last one standing. Free, in the browser, with bots to fill the room.",
+			"url": "https://curvytron2.com/",
+			"image": "curvytron2.jpg",
+			"gradient": "linear(to-tr, purple.700, red.400)",
+
+			"minPlayers": 1,
+			"maxPlayers": 255,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": true,
+
+			"tags": ["action"]
+		}
 	]
 }
