@@ -265,6 +265,21 @@
             "audience": false,
 
             "tags": ["coop", "drawing"]
+        },
+        {
+            "name": "Jigsaway",
+            "description": "Free online jigsaw puzzles. Open a room and solve the same puzzle together, with everyone's pieces moving live on one shared board. The host needs an account; friends join from the link.",
+            "url": "https://jigsaway.com/rooms",
+            "image": "jigsaway.jpg",
+            "gradient": "linear(to-br, teal.600, teal.400)",
+
+            "minPlayers": 1,
+            "maxPlayers": 12,
+            "familyFriendly": true,
+            "manualCensoring": false,
+            "audience": false,
+
+            "tags": ["coop"]
         }
 	]
 }
