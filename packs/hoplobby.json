@@ -1,0 +1,146 @@
+{
+	"id": 14,
+	"name": "HopLobby",
+	"slug": "hoplobby",
+	"url": "https://hoplobby.com/",
+	"gradient": "linear(to-tr, #ABA7F8, #C4F35B)",
+	"paid": false,
+	"rank": 30,
+	"games": [
+		{
+			"name": "HopSketch",
+			"description": "Draw your own weapon and armour, an AI judges how good your drawing is, then your fighter battles everyone else's creations. The worse your art, the funnier it gets.",
+			"url": "https://hoplobby.com/games/hopsketch",
+			"image": "hopsketch.webp",
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"drawing",
+				"funny"
+			]
+		},
+		{
+			"name": "Hop Party",
+			"description": "A 3D party board game: roll dice, race around the board, steal goblets from your friends and fight it out in quick minigames between turns.",
+			"url": "https://hoplobby.com/games/hopparty",
+			"image": "hopparty.webp",
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"funny"
+			]
+		},
+		{
+			"name": "HopKart",
+			"description": "Kart racing for up to 12 friends: drift, grind rails, glide off jumps and fire items at whoever is in first place.",
+			"url": "https://hoplobby.com/games/hopkart",
+			"image": "hopkart.webp",
+			"minPlayers": 2,
+			"maxPlayers": 12,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"action"
+			]
+		},
+		{
+			"name": "HopGolf",
+			"description": "Mini golf where everyone plays the same hole at once, so you can knock your friends' balls off line. 27 holes.",
+			"url": "https://hoplobby.com/games/hopgolf",
+			"image": "hopgolf.webp",
+			"minPlayers": 2,
+			"maxPlayers": 8,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": []
+		},
+		{
+			"name": "HopPool",
+			"description": "8-ball pool in a corner bar, 1v1 or 2v2, with spin and jump shots.",
+			"url": "https://hoplobby.com/games/hoppool",
+			"image": "hoppool.webp",
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": []
+		},
+		{
+			"name": "HopBar",
+			"description": "A liar's bluffing card game: lay your cards face down, call out whoever you think is lying, and hope the chamber is empty when you're caught.",
+			"url": "https://hoplobby.com/games/hopbar",
+			"image": "hopbar.webp",
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": false,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"funny"
+			]
+		},
+		{
+			"name": "HopBusiness",
+			"description": "A fast property board game: buy cities, build hotels and bankrupt your friends.",
+			"url": "https://hoplobby.com/games/hopbusiness",
+			"image": "hopbusiness.webp",
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": []
+		},
+		{
+			"name": "HopUp",
+			"description": "A climbing race up a giant junk tower. Run, wall-run and bounce your way up; first to the top wins, and everyone else falls a long way.",
+			"url": "https://hoplobby.com/games/hopup",
+			"image": "hopup.webp",
+			"minPlayers": 2,
+			"maxPlayers": 10,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"action"
+			]
+		},
+		{
+			"name": "HopParkour",
+			"description": "Rooftop tag: sprint, wall-run, vault and slide across the city to stay away from the chasers, or hunt everyone down when you're it.",
+			"url": "https://hoplobby.com/games/hopparkour",
+			"image": "hopparkour.webp",
+			"minPlayers": 2,
+			"maxPlayers": 10,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"action"
+			]
+		},
+		{
+			"name": "HopSmash",
+			"description": "A platform fighter: grab weapons and knock your friends off the island.",
+			"url": "https://hoplobby.com/games/hopsmash",
+			"image": "hopsmash.webp",
+			"minPlayers": 2,
+			"maxPlayers": 4,
+			"familyFriendly": true,
+			"manualCensoring": false,
+			"audience": false,
+			"tags": [
+				"action"
+			]
+		}
+	]
+}
